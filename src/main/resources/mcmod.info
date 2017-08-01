@@ -1,16 +1,16 @@
 [
 {
-  "modid": "portal658",
-  "name": "Portal658-MagicTech",
-  "description": "Portal658-MagicTech.",
-  "version": "3.6",
-  "mcversion": "1.10.2",
-  "url": "http://www.youtube.com/portal658",
-  "updateUrl": "",
-  "authorList": ["Portal658"],
-  "credits": "Made by Portal658",
-  "logoFile": "logo.png",
-  "screenshots": [],
-  "dependencies": []
+    "modid": "portal658",
+    "name": "§1Portal658-MagicTech",
+    "description": "Portal658-MagicTech.",
+    "version": "4.0",
+    "mcversion": "1.12",
+    "url": "http://www.youtube.com/portal658",
+    "updateUrl": "",
+    "authorList": ["Portal658"],
+    "credits": "Made by Portal658",
+    "logoFile": "logo.png",
+    "screenshots": [],
+    "dependencies": []
 }
 ]

@@ -3,6 +3,7 @@ package portal658.init;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import portal658.Reference;
 import portal658.init.items.crafting.ItemMagical_orb;
@@ -84,29 +85,31 @@ public class ModItems
 	
 	public static void register()
 	{
-		//GameRegistry.register(copperCoin);
-		//GameRegistry.register(ironCoin);
-		//GameRegistry.register(silverCoin);
-		//GameRegistry.register(goldCoin);
-		//GameRegistry.register(platinumCoin);
-		//GameRegistry.register(osmiumCoin);
-		//GameRegistry.register(naquadahCoin);
-		//GameRegistry.register(neutroniumCoin);
-		//GameRegistry.register(zambiaCoin);
-		//GameRegistry.register(errorCoin);
-		//GameRegistry.register(radiactiveCoin);
-		//GameRegistry.register(horseCoin);
-		//GameRegistry.register(churchCoin);
-		//GameRegistry.register(susCoin);
-		//GameRegistry.register(progressionCoin);
-		//GameRegistry.register(integralCoin);
-		//GameRegistry.register(metpromCoin);
-		//GameRegistry.register(luckyTicket);
-		//GameRegistry.register(morovizka);
-		//GameRegistry.register(chisel_rar);
-		//GameRegistry.register(superconductor);
-		//GameRegistry.register(super_circuit);
-		//GameRegistry.register(magical_orb);
+		
+		ForgeRegistries.ITEMS.register(copperCoin);
+		ForgeRegistries.ITEMS.register(copperCoin);
+		ForgeRegistries.ITEMS.register(ironCoin);
+		ForgeRegistries.ITEMS.register(silverCoin);
+		ForgeRegistries.ITEMS.register(goldCoin);
+		ForgeRegistries.ITEMS.register(platinumCoin);
+		ForgeRegistries.ITEMS.register(osmiumCoin);
+		ForgeRegistries.ITEMS.register(naquadahCoin);
+		ForgeRegistries.ITEMS.register(neutroniumCoin);
+		ForgeRegistries.ITEMS.register(zambiaCoin);
+		ForgeRegistries.ITEMS.register(errorCoin);
+		ForgeRegistries.ITEMS.register(radiactiveCoin);
+		ForgeRegistries.ITEMS.register(horseCoin);
+		ForgeRegistries.ITEMS.register(churchCoin);
+		ForgeRegistries.ITEMS.register(susCoin);
+		ForgeRegistries.ITEMS.register(progressionCoin);
+		ForgeRegistries.ITEMS.register(integralCoin);
+		ForgeRegistries.ITEMS.register(metpromCoin);
+		ForgeRegistries.ITEMS.register(luckyTicket);
+		ForgeRegistries.ITEMS.register(morovizka);
+		ForgeRegistries.ITEMS.register(chisel_rar);
+		ForgeRegistries.ITEMS.register(superconductor);
+		ForgeRegistries.ITEMS.register(super_circuit);
+		ForgeRegistries.ITEMS.register(magical_orb);
 	}
 	
 	public static void registerRenders()

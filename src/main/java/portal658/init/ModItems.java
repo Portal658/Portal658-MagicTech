@@ -116,29 +116,29 @@ public class ModItems
 	@SideOnly(Side.CLIENT)
 	public static void registerRenders()
 	{
-		registerRender(copperCoin);
-		registerRender(ironCoin);
-		registerRender(silverCoin);
-		registerRender(goldCoin);
-		registerRender(platinumCoin);
-		registerRender(osmiumCoin);
-		registerRender(naquadahCoin);
-		registerRender(neutroniumCoin);
-		registerRender(zambiaCoin);
-		registerRender(errorCoin);
-		registerRender(radiactiveCoin);
-		registerRender(horseCoin);
-		registerRender(churchCoin);
-		registerRender(susCoin);
-		registerRender(progressionCoin);
-		registerRender(integralCoin);
-		registerRender(metpromCoin);
-		registerRender(luckyTicket);
-		registerRender(morovizka);
-		registerRender(chisel_rar);
-		registerRender(superconductor);
-		registerRender(super_circuit);
-		registerRender(magical_orb);
+		setRender(copperCoin);
+		setRender(ironCoin);
+		setRender(silverCoin);
+		setRender(goldCoin);
+		setRender(platinumCoin);
+		setRender(osmiumCoin);
+		setRender(naquadahCoin);
+		setRender(neutroniumCoin);
+		setRender(zambiaCoin);
+		setRender(errorCoin);
+		setRender(radiactiveCoin);
+		setRender(horseCoin);
+		setRender(churchCoin);
+		setRender(susCoin);
+		setRender(progressionCoin);
+		setRender(integralCoin);
+		setRender(metpromCoin);
+		setRender(luckyTicket);
+		setRender(morovizka);
+		setRender(chisel_rar);
+		setRender(superconductor);
+		setRender(super_circuit);
+		setRender(magical_orb);
 	}
 	
 	private static void setRegister(Item item)
@@ -148,11 +148,6 @@ public class ModItems
 	
 	@SideOnly(Side.CLIENT)
 	private static void setRender(Item item)
-	{
-		
-	}
-	
-	private static void registerRender(Item item)
 	{
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0,
 			new ModelResourceLocation(item.getRegistryName(), "inventory"));

@@ -31,8 +31,6 @@ public class Portal658
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		proxy.preInit(event);
-		ModBlocks.init();
-		ModBlocks.register();
 	}
 	
 	@EventHandler

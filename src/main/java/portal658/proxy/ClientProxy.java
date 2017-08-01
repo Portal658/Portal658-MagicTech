@@ -22,7 +22,6 @@ public class ClientProxy extends CommonProxy
         super.init(event);
         ModItems.registerRenders();
         ModBlocks.registerRenders();
-        GameRegistry.registerWorldGenerator(new OreGen(), 0);
     }
 
     @Override

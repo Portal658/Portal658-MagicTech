@@ -1,6 +1,0 @@
-{
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "portal658:blocks/unificated_thaumium_block"
-    }
-}

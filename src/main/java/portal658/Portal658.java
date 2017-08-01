@@ -31,9 +31,6 @@ public class Portal658
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		proxy.preInit(event);
-		//ModItems.init();
-		//ModItems.register();
-		
 		ModBlocks.init();
 		ModBlocks.register();
 	}

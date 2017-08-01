@@ -5,6 +5,8 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import portal658.Reference;
 import portal658.init.items.crafting.ItemMagical_orb;
 import portal658.init.items.crafting.ItemSuper_circuit;
@@ -85,33 +87,33 @@ public class ModItems
 	
 	public static void register()
 	{
-		
-		ForgeRegistries.ITEMS.register(copperCoin);
-		ForgeRegistries.ITEMS.register(copperCoin);
-		ForgeRegistries.ITEMS.register(ironCoin);
-		ForgeRegistries.ITEMS.register(silverCoin);
-		ForgeRegistries.ITEMS.register(goldCoin);
-		ForgeRegistries.ITEMS.register(platinumCoin);
-		ForgeRegistries.ITEMS.register(osmiumCoin);
-		ForgeRegistries.ITEMS.register(naquadahCoin);
-		ForgeRegistries.ITEMS.register(neutroniumCoin);
-		ForgeRegistries.ITEMS.register(zambiaCoin);
-		ForgeRegistries.ITEMS.register(errorCoin);
-		ForgeRegistries.ITEMS.register(radiactiveCoin);
-		ForgeRegistries.ITEMS.register(horseCoin);
-		ForgeRegistries.ITEMS.register(churchCoin);
-		ForgeRegistries.ITEMS.register(susCoin);
-		ForgeRegistries.ITEMS.register(progressionCoin);
-		ForgeRegistries.ITEMS.register(integralCoin);
-		ForgeRegistries.ITEMS.register(metpromCoin);
-		ForgeRegistries.ITEMS.register(luckyTicket);
-		ForgeRegistries.ITEMS.register(morovizka);
-		ForgeRegistries.ITEMS.register(chisel_rar);
-		ForgeRegistries.ITEMS.register(superconductor);
-		ForgeRegistries.ITEMS.register(super_circuit);
-		ForgeRegistries.ITEMS.register(magical_orb);
+		setRegister(copperCoin);
+		setRegister(copperCoin);
+		setRegister(ironCoin);
+		setRegister(silverCoin);
+		setRegister(goldCoin);
+		setRegister(platinumCoin);
+		setRegister(osmiumCoin);
+		setRegister(naquadahCoin);
+		setRegister(neutroniumCoin);
+		setRegister(zambiaCoin);
+		setRegister(errorCoin);
+		setRegister(radiactiveCoin);
+		setRegister(horseCoin);
+		setRegister(churchCoin);
+		setRegister(susCoin);
+		setRegister(progressionCoin);
+		setRegister(integralCoin);
+		setRegister(metpromCoin);
+		setRegister(luckyTicket);
+		setRegister(morovizka);
+		setRegister(chisel_rar);
+		setRegister(superconductor);
+		setRegister(super_circuit);
+		setRegister(magical_orb);
 	}
 	
+	@SideOnly(Side.CLIENT)
 	public static void registerRenders()
 	{
 		registerRender(copperCoin);
@@ -137,6 +139,17 @@ public class ModItems
 		registerRender(superconductor);
 		registerRender(super_circuit);
 		registerRender(magical_orb);
+	}
+	
+	private static void setRegister(Item item)
+	{
+		ForgeRegistries.ITEMS.register(item);
+	}
+	
+	@SideOnly(Side.CLIENT)
+	private static void setRender(Item item)
+	{
+		
 	}
 	
 	private static void registerRender(Item item)

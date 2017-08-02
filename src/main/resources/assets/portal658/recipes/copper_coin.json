@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "portal658:ItemIronCoin"
+        }
+    ],
+    "result": {
+        "item": "portal658:ItemCopperCoin",
+		"count": 4
+    }
+}

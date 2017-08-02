@@ -1,9 +1,9 @@
 package portal658.init;
 
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.crafting.CraftingHelper;
+import net.minecraftforge.common.crafting.IRecipeFactory;
+import portal658.Reference;
 
 public class ModCrafting
 {
@@ -54,5 +54,10 @@ public class ModCrafting
 		//		'1', Items.NETHER_STAR, '2',Blocks.RED_MUSHROOM);
 		//GameRegistry.addShapedRecipe(new ItemStack(ModItems.chisel_rar), "121", "232", "121",
 		//		'1', ModItems.zambiaCoin, '2', ModItems.luckyTicket, '3', Items.NETHER_STAR);
+		registerRecipes("copper_coin");
+	}
+	private static void registerRecipes(String name)
+	{
+		CraftingHelper.register(new ResourceLocation(Reference.MOD_ID, name), (IRecipeFactory) (context, json) -> CraftingHelper.getRecipe(json, context));
 	}
 }

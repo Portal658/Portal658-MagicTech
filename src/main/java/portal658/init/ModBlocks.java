@@ -7,6 +7,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import portal658.blocks.BlockAskarinka;
 import portal658.blocks.BlockBerti;
 import portal658.blocks.BlockGotoman;
@@ -24,7 +26,6 @@ import portal658.blocks.ores.BlockSilver_coin_ore;
 
 public class ModBlocks
 {
-	
 	public static Block lavrusha;
 	public static Block parrot;
 	public static Block unificated_thaumium_block;
@@ -60,47 +61,49 @@ public class ModBlocks
 	
 	public static void register()
 	{
-		registerBlock(lavrusha);
-		registerBlock(parrot);
-		registerBlock(unificated_thaumium_block);
-		registerBlock(morovizka);
-		registerBlock(askarinka);
-		registerBlock(gotoman);
-		registerBlock(morda);
-		registerBlock(berti);
-		registerBlock(ruvon);
-		registerBlock(copper_coin_ore);
-		registerBlock(iron_coin_ore);
-		registerBlock(silver_coin_ore);
-		registerBlock(epic_coin_ore);
-		registerBlock(random_ore);
+		setRegister(lavrusha);
+		setRegister(parrot);
+		setRegister(unificated_thaumium_block);
+		setRegister(morovizka);
+		setRegister(askarinka);
+		setRegister(gotoman);
+		setRegister(morda);
+		setRegister(berti);
+		setRegister(ruvon);
+		setRegister(copper_coin_ore);
+		setRegister(iron_coin_ore);
+		setRegister(silver_coin_ore);
+		setRegister(epic_coin_ore);
+		setRegister(random_ore);
 	}
 	
+	@SideOnly(Side.CLIENT)
 	public static void registerRenders()
 	{
-		registerRender(lavrusha);
-		registerRender(parrot);
-		registerRender(unificated_thaumium_block);
-		registerRender(morovizka);
-		registerRender(askarinka);
-		registerRender(gotoman);
-		registerRender(morda);
-		registerRender(berti);
-		registerRender(ruvon);
-		registerRender(copper_coin_ore);
-		registerRender(iron_coin_ore);
-		registerRender(silver_coin_ore);
-		registerRender(epic_coin_ore);
-		registerRender(random_ore);
+		setRender(lavrusha);
+		setRender(parrot);
+		setRender(unificated_thaumium_block);
+		setRender(morovizka);
+		setRender(askarinka);
+		setRender(gotoman);
+		setRender(morda);
+		setRender(berti);
+		setRender(ruvon);
+		setRender(copper_coin_ore);
+		setRender(iron_coin_ore);
+		setRender(silver_coin_ore);
+		setRender(epic_coin_ore);
+		setRender(random_ore);
 	}
 	
-	private static void registerBlock(Block block)
+	private static void setRegister(Block block)
 	{
 		ForgeRegistries.BLOCKS.register(block);
 		ForgeRegistries.ITEMS.register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
 	}
 	
-	private static void registerRender(Block block)
+	@SideOnly(Side.CLIENT)
+	private static void setRender(Block block)
 	{
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block),
 			0, new ModelResourceLocation(block.getRegistryName(), "inventory"));

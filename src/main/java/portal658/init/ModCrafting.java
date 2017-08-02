@@ -54,7 +54,7 @@ public class ModCrafting
 		//		'1', Items.NETHER_STAR, '2',Blocks.RED_MUSHROOM);
 		//GameRegistry.addShapedRecipe(new ItemStack(ModItems.chisel_rar), "121", "232", "121",
 		//		'1', ModItems.zambiaCoin, '2', ModItems.luckyTicket, '3', Items.NETHER_STAR);
-		registerRecipes("copper_coin");
+		//registerRecipes("copper_coin");
 	}
 	private static void registerRecipes(String name)
 	{

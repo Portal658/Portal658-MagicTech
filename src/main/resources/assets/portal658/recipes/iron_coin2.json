@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients":
+	[
+        {
+            "item": "portal658:ItemCopperCoin"
+        },
+		{
+            "item": "portal658:ItemCopperCoin"
+        },
+		{
+            "item": "portal658:ItemCopperCoin"
+        },
+		{
+            "item": "portal658:ItemCopperCoin"
+        }
+    ],
+    "result":
+	{
+        "item": "portal658:ItemIronCoin"
+    }
+}

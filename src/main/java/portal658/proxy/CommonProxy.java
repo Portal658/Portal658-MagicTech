@@ -12,9 +12,7 @@ public class CommonProxy
 {
     public void preInit(FMLPreInitializationEvent event)
     {
-    	ModItems.init();
     	ModItems.register();
-    	ModBlocks.init();
 		ModBlocks.register();
 		GameRegistry.registerWorldGenerator(new OreGen(), 0);
     }

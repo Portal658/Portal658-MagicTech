@@ -26,38 +26,20 @@ import portal658.blocks.ores.BlockSilver_coin_ore;
 
 public class ModBlocks
 {
-	public static Block lavrusha;
-	public static Block parrot;
-	public static Block unificated_thaumium_block;
-	public static Block morovizka;
-	public static Block askarinka;
-	public static Block gotoman;
-	public static Block morda;
-	public static Block berti;
-	public static Block ruvon;
-	public static Block copper_coin_ore;
-	public static Block iron_coin_ore;
-	public static Block silver_coin_ore;
-	public static Block epic_coin_ore;
-	public static Block random_ore;
-	
-	public static void init()
-	{
-		lavrusha = new BlockLavrusha();
-		parrot = new BlockParrot();
-		unificated_thaumium_block = new BlockUnificated_thaumium_block();
-		morovizka = new BlockMorovizka();
-		askarinka = new BlockAskarinka();
-		gotoman = new BlockGotoman();
-		morda = new BlockMorda();
-		berti = new BlockBerti();
-		ruvon = new BlockRuvon();
-		copper_coin_ore = new BlockCopper_coin_ore();
-		iron_coin_ore = new BlockIron_coin_ore();
-		silver_coin_ore = new BlockSilver_coin_ore();
-		epic_coin_ore = new BlockEpic_coin_ore();
-		random_ore = new BlockRandom_ore();
-	}
+	public static Block lavrusha = new BlockLavrusha();
+	public static Block parrot = new BlockParrot();
+	public static Block unificated_thaumium_block = new BlockUnificated_thaumium_block();
+	public static Block morovizka = new BlockMorovizka();
+	public static Block askarinka = new BlockAskarinka();
+	public static Block gotoman = new BlockGotoman();
+	public static Block morda = new BlockMorda();
+	public static Block berti = new BlockBerti();
+	public static Block ruvon = new BlockRuvon();
+	public static Block copper_coin_ore = new BlockCopper_coin_ore();
+	public static Block iron_coin_ore = new BlockIron_coin_ore();
+	public static Block silver_coin_ore = new BlockSilver_coin_ore();
+	public static Block epic_coin_ore = new BlockEpic_coin_ore();
+	public static Block random_ore = new BlockRandom_ore();
 	
 	public static void register()
 	{

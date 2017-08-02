@@ -34,56 +34,29 @@ import portal658.items.coins.ItemZambiaCoin;
 
 public class ModItems
 {
-	public static Item copperCoin;
-	public static Item ironCoin;
-	public static Item silverCoin;
-	public static Item goldCoin;
-	public static Item platinumCoin;
-	public static Item osmiumCoin;
-	public static Item naquadahCoin;
-	public static Item neutroniumCoin;
-	public static Item zambiaCoin;
-	public static Item errorCoin;
-	public static Item radiactiveCoin;
-	public static Item horseCoin;
-	public static Item churchCoin;
-	public static Item susCoin;
-	public static Item progressionCoin;
-	public static Item integralCoin;
-	public static Item metpromCoin;
-	public static Item luckyTicket;
-	public static Item morovizka;
-	public static Item chisel_rar;
-	public static Item superconductor;
-	public static Item super_circuit;
-	public static Item magical_orb;
-	
-	public static void init()
-	{
-		copperCoin = new ItemCopperCoin();
-		ironCoin = new ItemIronCoin();
-		silverCoin = new ItemSilverCoin();
-		goldCoin = new ItemGoldCoin();
-		platinumCoin = new ItemPlatinumCoin();
-		osmiumCoin = new ItemOsmiumCoin();
-		naquadahCoin = new ItemNaquadahCoin();
-		neutroniumCoin = new ItemNeutroniumCoin();
-		zambiaCoin = new ItemZambiaCoin();
-		errorCoin = new ItemErrorCoin();
-		radiactiveCoin = new ItemRadiactiveCoin();
-		horseCoin = new ItemHorseCoin();
-		churchCoin = new ItemChurchCoin();
-		susCoin = new ItemSusCoin();
-		progressionCoin = new ItemProgressionCoin();
-		integralCoin = new ItemIntegralCoin();
-		metpromCoin = new ItemMetpromCoin();
-		luckyTicket = new ItemLuckyTicket();
-		morovizka = new ItemMorovizka();
-		chisel_rar = new ItemChisel_rar();
-		superconductor = new ItemSuperconductor();
-		super_circuit = new ItemSuper_circuit();
-		magical_orb = new ItemMagical_orb();
-	}
+	public static Item copperCoin = new ItemCopperCoin();
+	public static Item ironCoin = new ItemIronCoin();
+	public static Item silverCoin = new ItemSilverCoin();
+	public static Item goldCoin = new ItemGoldCoin();
+	public static Item platinumCoin = new ItemPlatinumCoin();
+	public static Item osmiumCoin = new ItemOsmiumCoin();
+	public static Item naquadahCoin = new ItemNaquadahCoin();
+	public static Item neutroniumCoin = new ItemNeutroniumCoin();
+	public static Item zambiaCoin = new ItemZambiaCoin();
+	public static Item errorCoin = new ItemErrorCoin();
+	public static Item radiactiveCoin = new ItemRadiactiveCoin();
+	public static Item horseCoin = new ItemHorseCoin();
+	public static Item churchCoin = new ItemChurchCoin();
+	public static Item susCoin = new ItemSusCoin();
+	public static Item progressionCoin = new ItemProgressionCoin();
+	public static Item integralCoin = new ItemIntegralCoin();
+	public static Item metpromCoin = new ItemMetpromCoin();
+	public static Item luckyTicket = new ItemLuckyTicket();
+	public static Item morovizka = new ItemMorovizka();
+	public static Item chisel_rar = new ItemChisel_rar();
+	public static Item superconductor = new ItemSuperconductor();
+	public static Item super_circuit = new ItemSuper_circuit();
+	public static Item magical_orb = new ItemMagical_orb();
 	
 	public static void register()
 	{

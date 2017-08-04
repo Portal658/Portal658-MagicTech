@@ -31,6 +31,7 @@ import portal658.items.coins.ItemRadiactiveCoin;
 import portal658.items.coins.ItemSilverCoin;
 import portal658.items.coins.ItemSusCoin;
 import portal658.items.coins.ItemZambiaCoin;
+import portal658.items.basicCoin;
 
 public class ModItems
 {
@@ -57,6 +58,7 @@ public class ModItems
 	public static Item superconductor = new ItemSuperconductor();
 	public static Item super_circuit = new ItemSuper_circuit();
 	public static Item magical_orb = new ItemMagical_orb();
+	public static Item basicCoin = new basicCoin();
 	
 	public static void register()
 	{
@@ -84,6 +86,7 @@ public class ModItems
 		setRegister(superconductor);
 		setRegister(super_circuit);
 		setRegister(magical_orb);
+		setRegister(basicCoin);
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -112,6 +115,7 @@ public class ModItems
 		setRender(superconductor);
 		setRender(super_circuit);
 		setRender(magical_orb);
+		setRender(basicCoin);
 	}
 	
 	private static void setRegister(Item item)

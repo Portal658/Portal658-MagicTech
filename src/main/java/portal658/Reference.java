@@ -31,7 +31,8 @@ public class Reference {
 		CHISEL_RAR("chisel_rar", "ItemChisel_rar"),
 		SUPERCONDUCTOR("superconductor", "ItemSuperconductor"),
 		SUPER_CIRCUIT("super_circuit", "ItemSuper_circuit"),
-		MAGICAL_ORB("magical_orb", "ItemMagical_orb");
+		MAGICAL_ORB("magical_orb", "ItemMagical_orb"),
+		BASIC_COIN("basicCoin", "basicCoin");
 		
 		private String unlocalizedName;
 		private String registryName;

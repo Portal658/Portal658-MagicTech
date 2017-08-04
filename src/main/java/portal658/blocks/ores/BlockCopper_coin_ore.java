@@ -24,7 +24,8 @@ public class BlockCopper_coin_ore extends Block
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
 	{
-		return ModItems.copperCoin;
+		//return ModItems.copperCoin;
+		return null;
 	}
 	
 	@Override

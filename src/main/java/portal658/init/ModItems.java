@@ -15,34 +15,19 @@ import portal658.items.ItemChisel_rar;
 import portal658.items.ItemLuckyTicket;
 import portal658.items.ItemMorovizka;
 import portal658.items.coins.ItemChurchCoin;
-import portal658.items.coins.ItemCopperCoin;
 import portal658.items.coins.ItemErrorCoin;
-import portal658.items.coins.ItemGoldCoin;
 import portal658.items.coins.ItemHorseCoin;
 import portal658.items.coins.ItemIntegralCoin;
-import portal658.items.coins.ItemIronCoin;
 import portal658.items.coins.ItemMetpromCoin;
-import portal658.items.coins.ItemNaquadahCoin;
-import portal658.items.coins.ItemNeutroniumCoin;
-import portal658.items.coins.ItemOsmiumCoin;
-import portal658.items.coins.ItemPlatinumCoin;
 import portal658.items.coins.ItemProgressionCoin;
 import portal658.items.coins.ItemRadiactiveCoin;
-import portal658.items.coins.ItemSilverCoin;
 import portal658.items.coins.ItemSusCoin;
 import portal658.items.coins.ItemZambiaCoin;
-import portal658.items.basicCoin;
+import portal658.items.BasicCoin;
 
 public class ModItems
 {
-	public static Item copperCoin = new ItemCopperCoin();
-	public static Item ironCoin = new ItemIronCoin();
-	public static Item silverCoin = new ItemSilverCoin();
-	public static Item goldCoin = new ItemGoldCoin();
-	public static Item platinumCoin = new ItemPlatinumCoin();
-	public static Item osmiumCoin = new ItemOsmiumCoin();
-	public static Item naquadahCoin = new ItemNaquadahCoin();
-	public static Item neutroniumCoin = new ItemNeutroniumCoin();
+	public static Item basicCoin = new BasicCoin();
 	public static Item zambiaCoin = new ItemZambiaCoin();
 	public static Item errorCoin = new ItemErrorCoin();
 	public static Item radiactiveCoin = new ItemRadiactiveCoin();
@@ -58,19 +43,11 @@ public class ModItems
 	public static Item superconductor = new ItemSuperconductor();
 	public static Item super_circuit = new ItemSuper_circuit();
 	public static Item magical_orb = new ItemMagical_orb();
-	public static Item basicCoin = new basicCoin();
+	
 	
 	public static void register()
 	{
-		setRegister(copperCoin);
-		setRegister(copperCoin);
-		setRegister(ironCoin);
-		setRegister(silverCoin);
-		setRegister(goldCoin);
-		setRegister(platinumCoin);
-		setRegister(osmiumCoin);
-		setRegister(naquadahCoin);
-		setRegister(neutroniumCoin);
+		setRegister(basicCoin);
 		setRegister(zambiaCoin);
 		setRegister(errorCoin);
 		setRegister(radiactiveCoin);
@@ -86,20 +63,12 @@ public class ModItems
 		setRegister(superconductor);
 		setRegister(super_circuit);
 		setRegister(magical_orb);
-		setRegister(basicCoin);
 	}
 	
 	@SideOnly(Side.CLIENT)
 	public static void registerRenders()
 	{
-		setRender(copperCoin);
-		setRender(ironCoin);
-		setRender(silverCoin);
-		setRender(goldCoin);
-		setRender(platinumCoin);
-		setRender(osmiumCoin);
-		setRender(naquadahCoin);
-		setRender(neutroniumCoin);
+		setRender(basicCoin);
 		setRender(zambiaCoin);
 		setRender(errorCoin);
 		setRender(radiactiveCoin);
@@ -115,7 +84,6 @@ public class ModItems
 		setRender(superconductor);
 		setRender(super_circuit);
 		setRender(magical_orb);
-		setRender(basicCoin);
 	}
 	
 	private static void setRegister(Item item)

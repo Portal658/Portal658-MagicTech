@@ -9,14 +9,7 @@ public class Reference {
 	
 	public static enum Portal658Items
 	{
-		COPPER_COIN("copperCoin", "ItemCopperCoin"),
-		IRON_COIN("ironCoin", "ItemIronCoin"),
-		SILVER_COIN("silverCoin", "ItemSilverCoin"),
-		GOLD_COIN("goldCoin", "ItemGoldCoin"),
-		PLATINUM_COIN("platinumCoin", "ItemPlatinumCoin"),
-		OSMIUM_COIN("osmiumCoin", "ItemOsmiumCoin"),
-		NAQUADAH_COIN("naquadahCoin", "ItemNaquadahCoin"),
-		NEUTRONIUM_COIN("neutroniumCoin", "ItemNeutroniumCoin"),
+		BASIC_COIN("basicCoin", "basicCoin"),
 		ZAMBIA_COIN("zambiaCoin", "ItemZambiaCoin"),
 		ERROR_COIN("errorCoin", "ItemErrorCoin"),
 		RADIACTIVE_COIN("radiactiveCoin", "ItemRadiactiveCoin"),
@@ -31,8 +24,7 @@ public class Reference {
 		CHISEL_RAR("chisel_rar", "ItemChisel_rar"),
 		SUPERCONDUCTOR("superconductor", "ItemSuperconductor"),
 		SUPER_CIRCUIT("super_circuit", "ItemSuper_circuit"),
-		MAGICAL_ORB("magical_orb", "ItemMagical_orb"),
-		BASIC_COIN("basicCoin", "basicCoin");
+		MAGICAL_ORB("magical_orb", "ItemMagical_orb");
 		
 		private String unlocalizedName;
 		private String registryName;

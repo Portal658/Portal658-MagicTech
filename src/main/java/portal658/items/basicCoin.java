@@ -12,26 +12,23 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import portal658.Portal658;
 import portal658.Reference;
-import portal658.items.itemlist.ListCoins;
+import portal658.items.itemlist.ListBasicCoins;
 
-public class basicCoin extends Item
+public class BasicCoin extends Item
 {
-	public static final ListCoins[] basicCoins = ListCoins.values();
+	public static final ListBasicCoins[] basicCoins = ListBasicCoins.values();
 	
-	public basicCoin()
+	public BasicCoin()
 	{
-		//this.setUnlocalizedName(unlocalizedName);
-		//this.setRegistryName(new ResourceLocation(Reference.MOD_ID, unlocalizedName));
 		setUnlocalizedName(Reference.Portal658Items.BASIC_COIN.getUnlocalizedName());
 		setRegistryName(Reference.Portal658Items.BASIC_COIN.getRegistryName());
-		setCreativeTab(Portal658.CREATIVE_TAB);
 		this.setHasSubtypes(true);
 	}
 	
 	@Override
 	public String getUnlocalizedName(ItemStack stack)
 	{
-		return "item." + basicCoins[stack.getItemDamage()].name;
+		return "item.basic_coin." + basicCoins[stack.getItemDamage()].name;
 	}
 	
 	@Override
@@ -52,9 +49,7 @@ public class basicCoin extends Item
 	{
 		for (int i = 0; i < basicCoins.length; ++i)
 		{
-			System.out.println(i + "qw");
 			items.add(new ItemStack(this, 1, i));
 		}
 	}
-
 }

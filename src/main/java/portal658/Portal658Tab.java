@@ -14,6 +14,7 @@ public class Portal658Tab extends CreativeTabs
 	@Override
 	public ItemStack getTabIconItem()
 	{
-		return new ItemStack(ModItems.osmiumCoin);
+		//return new ItemStack(ModItems.osmiumCoin);
+		return new ItemStack(ModItems.chisel_rar);
 	}
 }

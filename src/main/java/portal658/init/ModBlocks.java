@@ -21,7 +21,6 @@ import portal658.blocks.BlockUnificated_thaumium_block;
 import portal658.blocks.ores.BlockCopper_coin_ore;
 import portal658.blocks.ores.BlockEpic_coin_ore;
 import portal658.blocks.ores.BlockIron_coin_ore;
-import portal658.blocks.ores.BlockRandom_ore;
 import portal658.blocks.ores.BlockSilver_coin_ore;
 
 public class ModBlocks
@@ -39,7 +38,6 @@ public class ModBlocks
 	public static Block iron_coin_ore = new BlockIron_coin_ore();
 	public static Block silver_coin_ore = new BlockSilver_coin_ore();
 	public static Block epic_coin_ore = new BlockEpic_coin_ore();
-	public static Block random_ore = new BlockRandom_ore();
 	
 	public static void register()
 	{
@@ -56,7 +54,6 @@ public class ModBlocks
 		setRegister(iron_coin_ore);
 		setRegister(silver_coin_ore);
 		setRegister(epic_coin_ore);
-		setRegister(random_ore);
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -75,7 +72,6 @@ public class ModBlocks
 		setRender(iron_coin_ore);
 		setRender(silver_coin_ore);
 		setRender(epic_coin_ore);
-		setRender(random_ore);
 	}
 	
 	private static void setRegister(Block block)

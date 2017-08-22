@@ -99,24 +99,20 @@ public class ModItems
 	}
 	
 	@SideOnly(Side.CLIENT)
-	public static void registerItemVariants()
+	private static void setRender_witchMetaData()
 	{
 		ResourceLocation[] rl_basiccoins = new ResourceLocation[ListBasicCoins.values().length];
 		for(ListBasicCoins list : ListBasicCoins.values())
         {
-			ResourceLocation location = new ResourceLocation("portal658:coins/basic/" + list.getName());
+			ResourceLocation location = new ResourceLocation("portal658:" + list.getName());
 			rl_basiccoins[list.getMetadata()] = location;
         }
 		ModelBakery.registerItemVariants(basicCoin, rl_basiccoins);
-	}
-	
-	@SideOnly(Side.CLIENT)
-	public static void setRender_witchMetaData()
-	{
+		
 		for(ListBasicCoins list : ListBasicCoins.values())
         {
 			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(
-				basicCoin, list.getMetadata(), new ModelResourceLocation("portal658:coins/basic/" + list.getName(), "inventory"));
+				basicCoin, list.getMetadata(), new ModelResourceLocation("portal658:" + list.getName(), "inventory"));
         }
 	}
 }

@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "portal658:items/coins/platinumcoin"
+        "layer0": "portal658:items/coins/basic/gold_coin"
     }
 }

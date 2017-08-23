@@ -14,30 +14,15 @@ import portal658.init.items.crafting.ItemSuperconductor;
 import portal658.items.ItemChisel_rar;
 import portal658.items.ItemLuckyTicket;
 import portal658.items.ItemMorovizka;
-import portal658.items.coins.ItemChurchCoin;
-import portal658.items.coins.ItemErrorCoin;
-import portal658.items.coins.ItemHorseCoin;
-import portal658.items.coins.ItemIntegralCoin;
-import portal658.items.coins.ItemMetpromCoin;
-import portal658.items.coins.ItemProgressionCoin;
-import portal658.items.coins.ItemRadiactiveCoin;
-import portal658.items.coins.ItemSusCoin;
-import portal658.items.coins.ItemZambiaCoin;
+import portal658.items.OtherCoin;
 import portal658.items.itemlist.ListBasicCoins;
+import portal658.items.itemlist.ListOtherCoins;
 import portal658.items.BasicCoin;
 
 public class ModItems
 {
 	public static Item basicCoin = new BasicCoin();
-	public static Item zambiaCoin = new ItemZambiaCoin();
-	public static Item errorCoin = new ItemErrorCoin();
-	public static Item radiactiveCoin = new ItemRadiactiveCoin();
-	public static Item horseCoin = new ItemHorseCoin();
-	public static Item churchCoin = new ItemChurchCoin();
-	public static Item susCoin = new ItemSusCoin();
-	public static Item progressionCoin = new ItemProgressionCoin();
-	public static Item integralCoin = new ItemIntegralCoin();
-	public static Item metpromCoin = new ItemMetpromCoin();
+	public static Item otherCoin = new OtherCoin();
 	public static Item luckyTicket = new ItemLuckyTicket();
 	public static Item morovizka = new ItemMorovizka();
 	public static Item chisel_rar = new ItemChisel_rar();
@@ -48,15 +33,7 @@ public class ModItems
 	public static void register()
 	{
 		setRegister(basicCoin);
-		setRegister(zambiaCoin);
-		setRegister(errorCoin);
-		setRegister(radiactiveCoin);
-		setRegister(horseCoin);
-		setRegister(churchCoin);
-		setRegister(susCoin);
-		setRegister(progressionCoin);
-		setRegister(integralCoin);
-		setRegister(metpromCoin);
+		setRegister(otherCoin);
 		setRegister(luckyTicket);
 		setRegister(morovizka);
 		setRegister(chisel_rar);
@@ -69,15 +46,6 @@ public class ModItems
 	public static void registerRenders()
 	{
 		setRender_witchMetaData();
-		setRender(zambiaCoin);
-		setRender(errorCoin);
-		setRender(radiactiveCoin);
-		setRender(horseCoin);
-		setRender(churchCoin);
-		setRender(susCoin);
-		setRender(progressionCoin);
-		setRender(integralCoin);
-		setRender(metpromCoin);
 		setRender(luckyTicket);
 		setRender(morovizka);
 		setRender(chisel_rar);
@@ -108,6 +76,14 @@ public class ModItems
 			rl_basiccoins[list.getMetadata()] = location;
         }
 		ModelBakery.registerItemVariants(basicCoin, rl_basiccoins);
+		
+		ResourceLocation[] rl_othercoins = new ResourceLocation[ListOtherCoins.values().length];
+		for(ListOtherCoins list : ListOtherCoins.values())
+        {
+			ResourceLocation location = new ResourceLocation("portal658:coins/other/" + list.getName());
+			rl_othercoins[list.getMetadata()] = location;
+        }
+		ModelBakery.registerItemVariants(otherCoin, rl_othercoins);
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -117,6 +93,11 @@ public class ModItems
         {
 			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(
 				basicCoin, list.getMetadata(), new ModelResourceLocation("portal658:coins/basic/" + list.getName(), "inventory"));
+        }
+		for(ListOtherCoins list : ListOtherCoins.values())
+        {
+			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(
+				otherCoin, list.getMetadata(), new ModelResourceLocation("portal658:coins/other/" + list.getName(), "inventory"));
         }
 	}
 }

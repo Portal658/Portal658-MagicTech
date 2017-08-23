@@ -30,7 +30,12 @@ public enum ListBasicCoins implements IStringSerializable
     {
     	return metadata;
     }
-
+    
+    public EnumRarity getRarity()
+    {
+    	return rarity;
+    }
+    
 	@Override
 	public String getName()
 	{

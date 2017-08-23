@@ -10,15 +10,7 @@ public class Reference {
 	public static enum Portal658Items
 	{
 		BASIC_COIN("basicCoin", "basicCoin"),
-		ZAMBIA_COIN("zambiaCoin", "ItemZambiaCoin"),
-		ERROR_COIN("errorCoin", "ItemErrorCoin"),
-		RADIACTIVE_COIN("radiactiveCoin", "ItemRadiactiveCoin"),
-		HORSE_COIN("horseCoin", "ItemHorseCoin"),
-		CHURCH_COIN("churchCoin", "ItemChurchCoin"),
-		SUS_COIN("susCoin", "ItemSusCoin"),
-		PROGRESSION_COIN("progressionCoin", "ItemProgressionCoin"),
-		INTEGRAL_COIN("integralCoin", "ItemIntegralCoin"),
-		METPROM_COIN("metpromCoin", "ItemMetpromCoin"),
+		OTHER_COIN("otherCoin", "otherCoin"),
 		LUCKY_TICKET("luckyTicket", "ItemLuckyTicket"),
 		MOROVIZKA("morovizka", "ItemMorovizka"),
 		CHISEL_RAR("chisel_rar", "ItemChisel_rar"),

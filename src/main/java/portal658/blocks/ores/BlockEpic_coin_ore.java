@@ -32,16 +32,16 @@ public class BlockEpic_coin_ore extends Block
 		int random = rand.nextInt(10);
 		switch(random)
 		{
-		case 0: return ModItems.zambiaCoin;
-		case 1: return ModItems.susCoin;
-		case 2: return ModItems.progressionCoin;
-		case 3: return ModItems.integralCoin;
-		case 4: return ModItems.metpromCoin;
-		case 5: return ModItems.luckyTicket;
-		case 6: return ModItems.errorCoin;
-		case 7: return ModItems.radiactiveCoin;
-		case 8: return ModItems.horseCoin;
-		case 9: return ModItems.churchCoin;
+		//case 0: return ModItems.zambiaCoin;
+	//	case 1: return ModItems.susCoin;
+	//	case 2: return ModItems.progressionCoin;
+	//	case 3: return ModItems.integralCoin;
+	//	case 4: return ModItems.metpromCoin;
+	//	case 5: return ModItems.luckyTicket;
+	//	case 6: return ModItems.errorCoin;
+	//	case 7: return ModItems.radiactiveCoin;
+	//	case 8: return ModItems.horseCoin;
+	//	case 9: return ModItems.churchCoin;
 		}
 		return null;
 	}

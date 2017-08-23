@@ -15,11 +15,11 @@ public enum ListBasicCoins implements IStringSerializable
 	NAQUADAH_COIN("naquadah_coin", 6, EnumRarity.RARE),
 	NEUTRONIUM_COIN("neutronium_coin", 7, EnumRarity.EPIC);
 	
-	public final String name;
-    public final EnumRarity rarity;
-    public int metadata;
+	private final String name;
+	private final EnumRarity rarity;
+    private int metadata;
     
-    ListBasicCoins(String name, int metadata, EnumRarity rarity)
+    private ListBasicCoins(String name, int metadata, EnumRarity rarity)
     {
         this.name = name;
         this.metadata = metadata;

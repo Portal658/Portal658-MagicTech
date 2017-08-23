@@ -30,7 +30,7 @@ public class BasicCoin extends Item
 	@Override
 	public String getUnlocalizedName(ItemStack stack)
 	{
-		return "item." + basicCoins[stack.getItemDamage()].name;
+		return "item." + basicCoins[stack.getItemDamage()].getName();
 	}
 	
 	@Override
@@ -42,7 +42,7 @@ public class BasicCoin extends Item
 	@Override
 	public EnumRarity getRarity(ItemStack stack)
 	{
-		return basicCoins[stack.getItemDamage()].rarity;
+		return basicCoins[stack.getItemDamage()].getRarity();
 	}
 	
 	@Override

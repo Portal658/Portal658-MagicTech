@@ -16,11 +16,11 @@ public enum ListOtherCoins implements IStringSerializable
 	INTEGRAL_COIN("integral_coin", 7, EnumRarity.UNCOMMON),
 	METPROM_COIN("metprom_coin", 8, EnumRarity.UNCOMMON);
 	
-	public final String name;
-    public final EnumRarity rarity;
-    public int metadata;
+	private final String name;
+	private final EnumRarity rarity;
+	private int metadata;
     
-    ListOtherCoins(String name, int metadata, EnumRarity rarity)
+    private ListOtherCoins(String name, int metadata, EnumRarity rarity)
     {
         this.name = name;
         this.metadata = metadata;

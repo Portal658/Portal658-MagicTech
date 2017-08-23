@@ -15,7 +15,7 @@ import portal658.proxy.CommonProxy;
 
 import java.lang.System;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.NAME, useMetadata = true)
+@Mod(modid = Reference.MOD_ID, name = Reference.NAME, useMetadata = true, acceptedMinecraftVersions = Reference.ACCEPTED_VERSION)
 
 public class Portal658
 {

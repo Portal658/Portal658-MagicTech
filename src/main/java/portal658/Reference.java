@@ -13,9 +13,9 @@ public class Reference {
 		BASIC_COIN("basicCoin", "basicCoin"),
 		OTHER_COIN("otherCoin", "otherCoin"),
 		CRAFTING_COMPONENT("craftingComponent", "craftingComponent"),
-		LUCKY_TICKET("luckyTicket", "ItemLuckyTicket"),
-		MOROVIZKA("morovizka", "ItemMorovizka"),
-		CHISEL_RAR("chisel_rar", "ItemChisel_rar");
+		LUCKY_TICKET("luckyTicket", "luckyTicket"),
+		MOROVIZKA("morovizka", "morovizka"),
+		CHISEL_RAR("chisel_rar", "chisel_rar");
 		
 		private String unlocalizedName;
 		private String registryName;

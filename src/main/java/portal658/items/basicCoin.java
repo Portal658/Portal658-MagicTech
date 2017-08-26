@@ -13,6 +13,7 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import portal658.Portal658;
 import portal658.Reference;
 import portal658.items.itemlist.ListBasicCoins;
 
@@ -25,6 +26,7 @@ public class BasicCoin extends Item
 		setUnlocalizedName(Reference.Portal658Items.BASIC_COIN.getUnlocalizedName());
 		setRegistryName(Reference.Portal658Items.BASIC_COIN.getRegistryName());
 		this.setHasSubtypes(true);
+		this.setCreativeTab(Portal658.CREATIVE_TAB);
 	}
 	
 	@Override
@@ -49,9 +51,12 @@ public class BasicCoin extends Item
 	@SideOnly(Side.CLIENT)
 	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> items)
 	{
-		for (int i = 0; i < basicCoins.length; ++i)
+		if (tab == Portal658.CREATIVE_TAB)
 		{
-			items.add(new ItemStack(this, 1, i));
+			for (int i = 0; i < basicCoins.length; ++i)
+			{
+				items.add(new ItemStack(this, 1, i));
+			}
 		}
 	}
 	

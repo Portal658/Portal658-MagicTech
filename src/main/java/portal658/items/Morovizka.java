@@ -4,9 +4,9 @@ import net.minecraft.item.Item;
 import portal658.Portal658;
 import portal658.Reference;
 
-public class ItemMorovizka extends Item
+public class Morovizka extends Item
 {
-	public ItemMorovizka()
+	public Morovizka()
 	{
 		setUnlocalizedName(Reference.Portal658Items.MOROVIZKA.getUnlocalizedName());
 		setRegistryName(Reference.Portal658Items.MOROVIZKA.getRegistryName());

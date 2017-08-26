@@ -8,13 +8,13 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import portal658.items.ItemChisel_rar;
-import portal658.items.ItemLuckyTicket;
-import portal658.items.ItemMorovizka;
+import portal658.items.LuckyTicket;
+import portal658.items.Morovizka;
 import portal658.items.OtherCoin;
 import portal658.items.itemlist.ListBasicCoins;
 import portal658.items.itemlist.ListOtherCoins;
 import portal658.items.BasicCoin;
+import portal658.items.ChiselRaR;
 import portal658.items.CraftingComponent;
 
 public class ModItems
@@ -22,9 +22,9 @@ public class ModItems
 	public static Item basicCoin = new BasicCoin();
 	public static Item otherCoin = new OtherCoin();
 	public static Item craftingComponent = new CraftingComponent();
-	public static Item luckyTicket = new ItemLuckyTicket();
-	public static Item morovizka = new ItemMorovizka();
-	public static Item chisel_rar = new ItemChisel_rar();
+	public static Item luckyTicket = new LuckyTicket();
+	public static Item morovizka = new Morovizka();
+	public static Item chisel_rar = new ChiselRaR();
 	
 	public static void register()
 	{

@@ -14,9 +14,9 @@ import net.minecraft.world.World;
 import portal658.Portal658;
 import portal658.Reference;
 
-public class ItemChisel_rar extends Item
+public class ChiselRaR extends Item
 {
-	public ItemChisel_rar()
+	public ChiselRaR()
 	{
 		setUnlocalizedName(Reference.Portal658Items.CHISEL_RAR.getUnlocalizedName());
 		setRegistryName(Reference.Portal658Items.CHISEL_RAR.getRegistryName());

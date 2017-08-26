@@ -11,6 +11,7 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import portal658.Portal658;
 import portal658.Reference;
 import portal658.items.itemlist.ListCraftingComponents;
 
@@ -23,6 +24,7 @@ public class CraftingComponent extends Item
 		setUnlocalizedName(Reference.Portal658Items.CRAFTING_COMPONENT.getUnlocalizedName());
 		setRegistryName(Reference.Portal658Items.CRAFTING_COMPONENT.getRegistryName());
 		this.setHasSubtypes(true);
+		this.setCreativeTab(Portal658.CREATIVE_TAB);
 	}
 	
 	@Override
@@ -47,9 +49,12 @@ public class CraftingComponent extends Item
 	@SideOnly(Side.CLIENT)
 	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> items)
 	{
-		for (int i = 0; i < craftingComponents.length; ++i)
+		if (tab == Portal658.CREATIVE_TAB)
 		{
-			items.add(new ItemStack(this, 1, i));
+			for (int i = 0; i < craftingComponents.length; ++i)
+			{
+				items.add(new ItemStack(this, 1, i));
+			}
 		}
 	}
 	

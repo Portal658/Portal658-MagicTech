@@ -2,8 +2,10 @@ package portal658.items;
 
 import java.util.List;
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.block.model.ModelBakery;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -11,9 +13,7 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import portal658.Portal658;
 import portal658.Reference;
-import portal658.init.ModItems;
 import portal658.items.itemlist.ListOtherCoins;
 
 public class OtherCoin extends Item
@@ -53,5 +53,25 @@ public class OtherCoin extends Item
 		{
 			items.add(new ItemStack(this, 1, i));
 		}
+	}
+	
+	public static void registerRender(Item item)
+	{
+		for(ListOtherCoins list : ListOtherCoins.values())
+        {
+			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(
+				item, list.getMetadata(), new ModelResourceLocation("portal658:coins/other/" + list.getName(), "inventory"));
+        }
+	}
+	
+	public static void registerItemVariants(Item item)
+	{
+		ResourceLocation[] rl_othercoins = new ResourceLocation[ListOtherCoins.values().length];
+		for(ListOtherCoins list : ListOtherCoins.values())
+        {
+			ResourceLocation location = new ResourceLocation("portal658:coins/other/" + list.getName());
+			rl_othercoins[list.getMetadata()] = location;
+        }
+		ModelBakery.registerItemVariants(item, rl_othercoins);
 	}
 }

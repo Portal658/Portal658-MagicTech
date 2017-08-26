@@ -1,7 +1,5 @@
 package portal658.items;
 
-import java.util.List;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -14,23 +12,23 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import portal658.Reference;
-import portal658.items.itemlist.ListBasicCoins;
+import portal658.items.itemlist.ListCraftingComponents;
 
-public class BasicCoin extends Item
+public class CraftingComponent extends Item
 {
-	public static final ListBasicCoins[] basicCoins = ListBasicCoins.values();
+	public static final ListCraftingComponents[] craftingComponents = ListCraftingComponents.values();
 	
-	public BasicCoin()
+	public CraftingComponent()
 	{
-		setUnlocalizedName(Reference.Portal658Items.BASIC_COIN.getUnlocalizedName());
-		setRegistryName(Reference.Portal658Items.BASIC_COIN.getRegistryName());
+		setUnlocalizedName(Reference.Portal658Items.CRAFTING_COMPONENT.getUnlocalizedName());
+		setRegistryName(Reference.Portal658Items.CRAFTING_COMPONENT.getRegistryName());
 		this.setHasSubtypes(true);
 	}
 	
 	@Override
 	public String getUnlocalizedName(ItemStack stack)
 	{
-		return "item." + basicCoins[stack.getItemDamage()].getName();
+		return "item." + craftingComponents[stack.getItemDamage()].getName();
 	}
 	
 	@Override
@@ -42,14 +40,14 @@ public class BasicCoin extends Item
 	@Override
 	public EnumRarity getRarity(ItemStack stack)
 	{
-		return basicCoins[stack.getItemDamage()].getRarity();
+		return craftingComponents[stack.getItemDamage()].getRarity();
 	}
 	
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> items)
 	{
-		for (int i = 0; i < basicCoins.length; ++i)
+		for (int i = 0; i < craftingComponents.length; ++i)
 		{
 			items.add(new ItemStack(this, 1, i));
 		}
@@ -57,21 +55,21 @@ public class BasicCoin extends Item
 	
 	public static void registerRender(Item item)
 	{
-		for(ListBasicCoins list : ListBasicCoins.values())
+		for(ListCraftingComponents list : ListCraftingComponents.values())
         {
 			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(
-				item, list.getMetadata(), new ModelResourceLocation("portal658:coins/basic/" + list.getName(), "inventory"));
+				item, list.getMetadata(), new ModelResourceLocation("portal658:crafting/" + list.getName(), "inventory"));
         }
 	}
 	
 	public static void registerItemVariants(Item item)
 	{
-		ResourceLocation[] rl_basiccoins = new ResourceLocation[ListBasicCoins.values().length];
-		for(ListBasicCoins list : ListBasicCoins.values())
+		ResourceLocation[] rl_crafting = new ResourceLocation[ListCraftingComponents.values().length];
+		for(ListCraftingComponents list : ListCraftingComponents.values())
         {
-			ResourceLocation location = new ResourceLocation("portal658:coins/basic/" + list.getName());
-			rl_basiccoins[list.getMetadata()] = location;
+			ResourceLocation location = new ResourceLocation("portal658:crafting/" + list.getName());
+			rl_crafting[list.getMetadata()] = location;
         }
-		ModelBakery.registerItemVariants(item, rl_basiccoins);
+		ModelBakery.registerItemVariants(item, rl_crafting);
 	}
 }

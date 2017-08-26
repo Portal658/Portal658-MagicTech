@@ -12,12 +12,10 @@ public class Reference {
 	{
 		BASIC_COIN("basicCoin", "basicCoin"),
 		OTHER_COIN("otherCoin", "otherCoin"),
+		CRAFTING_COMPONENT("craftingComponent", "craftingComponent"),
 		LUCKY_TICKET("luckyTicket", "ItemLuckyTicket"),
 		MOROVIZKA("morovizka", "ItemMorovizka"),
-		CHISEL_RAR("chisel_rar", "ItemChisel_rar"),
-		SUPERCONDUCTOR("superconductor", "ItemSuperconductor"),
-		SUPER_CIRCUIT("super_circuit", "ItemSuper_circuit"),
-		MAGICAL_ORB("magical_orb", "ItemMagical_orb");
+		CHISEL_RAR("chisel_rar", "ItemChisel_rar");
 		
 		private String unlocalizedName;
 		private String registryName;

@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "portal658:blocks/ores/epic_coin_ore"
+        "all": "portal658:blocks/ores/coinore_epic"
     }
 }

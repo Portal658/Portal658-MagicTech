@@ -17,7 +17,7 @@ public class CommonProxy
 		GameRegistry.registerWorldGenerator(new OreGen(), 0);
     }
 
-    public void init(FMLInitializationEvent e)
+    public void init(FMLInitializationEvent event)
     {
 
     }

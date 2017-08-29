@@ -39,11 +39,7 @@ public class Reference {
 	
 	public static enum Portal658Blocks
 	{
-		COPPER_COIN_ORE("copper_coin_ore", "BlockCopper_coin_ore"),
-		IRON_COIN_ORE("iron_coin_ore", "BlockIron_coin_ore"),
-		SILVER_COIN_ORE("silver_coin_ore", "BlockSilver_coin_ore"),
-		EPIC_COIN_ORE("epic_coin_ore", "BlockEpic_coin_ore"),
-		RANDOM_ORE("random_ore", "BlockRandom_ore"),
+		COIN_ORE("coinOre", "coinOre"),
 		LAVRUSHA("lavrusha", "BlockLavrusha"),
 		PARROT("parrot", "BlockParrot"),
 		UNIFICATED_THAUMIUM_BLOCK("unificated_thaumium_block", "BlockUnificated_thaumium_block"),

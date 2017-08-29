@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "type=copper": { "model": "portal658:ores/coinore_copper" },
+		"type=iron": { "model": "portal658:ores/coinore_iron" },
+		"type=silver": { "model": "portal658:ores/coinore_silver" },
+		"type=epic": { "model": "portal658:ores/coinore_epic" }
+    }
+}

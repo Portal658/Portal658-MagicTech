@@ -18,6 +18,7 @@ public class ClientProxy extends CommonProxy
     {
         super.preInit(event);
         ModItems. registerItemVariants();
+        ModBlocks.registerItemVariants();
     }
 
     @Override

@@ -10,22 +10,22 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
 import portal658.blocks.BlockBerti;
+import portal658.blocks.blocklist.ListCoinOres;
 import portal658.init.ModBlocks;
 
 public class OreGen implements IWorldGenerator
 {
-
-	private WorldGenerator copper_coin_ore;
-	private WorldGenerator iron_coin_ore;
-	private WorldGenerator silver_coin_ore;
-	private WorldGenerator epic_coin_ore;
+	//private WorldGenerator copper_coin_ore;
+	//private WorldGenerator iron_coin_ore;
+	//private WorldGenerator silver_coin_ore;
+	//private WorldGenerator epic_coin_ore;
 	
 	public OreGen()
 	{
-		copper_coin_ore = new WorldGenMinable(ModBlocks.copper_coin_ore.getDefaultState(), 5);
-		iron_coin_ore = new WorldGenMinable(ModBlocks.iron_coin_ore.getDefaultState(), 3);
-		silver_coin_ore = new WorldGenMinable(ModBlocks.silver_coin_ore.getDefaultState(), 3);
-		epic_coin_ore = new WorldGenMinable(ModBlocks.epic_coin_ore.getDefaultState(), 3);
+		//copper_coin_ore = new WorldGenMinable(ModBlocks.coinOre.getStateFromMeta(ListCoinOres.COPPER.getMetadata()), 5);
+		//iron_coin_ore = new WorldGenMinable(ModBlocks.iron_coin_ore.getDefaultState(), 3);
+		//silver_coin_ore = new WorldGenMinable(ModBlocks.silver_coin_ore.getDefaultState(), 3);
+		//epic_coin_ore = new WorldGenMinable(ModBlocks.epic_coin_ore.getDefaultState(), 3);
 	}
 	
 	private void runGenerator(WorldGenerator generator, World world, Random rand, int chunk_X, int chunk_Z, int chancesToSpawn, int minHeight, int maxHeight)
@@ -47,9 +47,9 @@ public class OreGen implements IWorldGenerator
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
 	{
-		runGenerator(copper_coin_ore, world, random, chunkX, chunkZ, 12, 16, 64);
-		runGenerator(iron_coin_ore, world, random, chunkX, chunkZ, 6, 16, 64);
-		runGenerator(silver_coin_ore, world, random, chunkX, chunkZ, 4, 16, 64);
-		runGenerator(epic_coin_ore, world, random, chunkX, chunkZ, 4, 0, 32);
+		//runGenerator(copper_coin_ore, world, random, chunkX, chunkZ, 12, 16, 64);
+		//runGenerator(iron_coin_ore, world, random, chunkX, chunkZ, 6, 16, 64);
+		//runGenerator(silver_coin_ore, world, random, chunkX, chunkZ, 4, 16, 64);
+		//runGenerator(epic_coin_ore, world, random, chunkX, chunkZ, 4, 0, 32);
 	}
 }

@@ -46,7 +46,7 @@ public class BasicCoin extends Item
 	{
 		return basicCoins[stack.getItemDamage()].getRarity();
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> items)

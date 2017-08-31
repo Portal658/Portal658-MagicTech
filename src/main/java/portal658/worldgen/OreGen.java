@@ -2,6 +2,7 @@ package portal658.worldgen;
 
 import java.util.Random;
 
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -15,17 +16,23 @@ import portal658.init.ModBlocks;
 
 public class OreGen implements IWorldGenerator
 {
-	//private WorldGenerator copper_coin_ore;
-	//private WorldGenerator iron_coin_ore;
-	//private WorldGenerator silver_coin_ore;
-	//private WorldGenerator epic_coin_ore;
+	private WorldGenerator copper_up;
+	private WorldGenerator copper_down;
+	private WorldGenerator iron_up;
+	private WorldGenerator iron_down;
+	private WorldGenerator silver_up;
+	private WorldGenerator silver_down;
+	private WorldGenerator epic;
 	
 	public OreGen()
 	{
-		//copper_coin_ore = new WorldGenMinable(ModBlocks.coinOre.getStateFromMeta(ListCoinOres.COPPER.getMetadata()), 5);
-		//iron_coin_ore = new WorldGenMinable(ModBlocks.iron_coin_ore.getDefaultState(), 3);
-		//silver_coin_ore = new WorldGenMinable(ModBlocks.silver_coin_ore.getDefaultState(), 3);
-		//epic_coin_ore = new WorldGenMinable(ModBlocks.epic_coin_ore.getDefaultState(), 3);
+		copper_up = new WorldGenMinable(ModBlocks.coinOre.getStateFromMeta(ListCoinOres.COPPER.getMetadata()), 5);
+		copper_down = new WorldGenMinable(ModBlocks.coinOre.getStateFromMeta(ListCoinOres.COPPER.getMetadata()), 5);
+		iron_up = new WorldGenMinable(ModBlocks.coinOre.getStateFromMeta(ListCoinOres.IRON.getMetadata()), 3);
+		iron_down = new WorldGenMinable(ModBlocks.coinOre.getStateFromMeta(ListCoinOres.IRON.getMetadata()), 2);
+		silver_up = new WorldGenMinable(ModBlocks.coinOre.getStateFromMeta(ListCoinOres.SILVER.getMetadata()), 3);
+		silver_down = new WorldGenMinable(ModBlocks.coinOre.getStateFromMeta(ListCoinOres.SILVER.getMetadata()), 3);
+		epic = new WorldGenMinable(ModBlocks.coinOre.getStateFromMeta(ListCoinOres.EPIC.getMetadata()), 3);
 	}
 	
 	private void runGenerator(WorldGenerator generator, World world, Random rand, int chunk_X, int chunk_Z, int chancesToSpawn, int minHeight, int maxHeight)
@@ -47,9 +54,12 @@ public class OreGen implements IWorldGenerator
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
 	{
-		//runGenerator(copper_coin_ore, world, random, chunkX, chunkZ, 12, 16, 64);
-		//runGenerator(iron_coin_ore, world, random, chunkX, chunkZ, 6, 16, 64);
-		//runGenerator(silver_coin_ore, world, random, chunkX, chunkZ, 4, 16, 64);
-		//runGenerator(epic_coin_ore, world, random, chunkX, chunkZ, 4, 0, 32);
+		runGenerator(copper_up, world, random, chunkX, chunkZ, 12, 16, 64);
+		runGenerator(copper_down, world, random, chunkX, chunkZ, 6, 0, 31);
+		runGenerator(iron_up, world, random, chunkX, chunkZ, 6, 16, 64);
+		runGenerator(iron_down, world, random, chunkX, chunkZ, 4, 0, 15);
+		runGenerator(silver_up, world, random, chunkX, chunkZ, 4, 16, 64);
+		runGenerator(silver_down, world, random, chunkX, chunkZ, 3, 0, 15);
+		runGenerator(epic, world, random, chunkX, chunkZ, 4, 0, 32);
 	}
 }

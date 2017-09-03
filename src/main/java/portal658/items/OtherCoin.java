@@ -23,10 +23,9 @@ public class OtherCoin extends Item
 	
 	public OtherCoin()
 	{
-		setUnlocalizedName(Reference.Portal658Items.OTHER_COIN.getUnlocalizedName());
-		setRegistryName(Reference.Portal658Items.OTHER_COIN.getRegistryName());
+		this.setUnlocalizedName(Reference.Portal658Items.OTHER_COIN.getUnlocalizedName());
+		this.setRegistryName(Reference.Portal658Items.OTHER_COIN.getRegistryName());
 		this.setHasSubtypes(true);
-		this.setCreativeTab(Portal658.CREATIVE_TAB);
 	}
 	
 	@Override

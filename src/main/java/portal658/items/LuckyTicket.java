@@ -8,8 +8,8 @@ public class LuckyTicket extends Item
 {
 	public LuckyTicket()
 	{
-		setUnlocalizedName(Reference.Portal658Items.LUCKY_TICKET.getUnlocalizedName());
-		setRegistryName(Reference.Portal658Items.LUCKY_TICKET.getRegistryName());
-		setCreativeTab(Portal658.CREATIVE_TAB);
+		this.setUnlocalizedName(Reference.Portal658Items.LUCKY_TICKET.getUnlocalizedName());
+		this.setRegistryName(Reference.Portal658Items.LUCKY_TICKET.getRegistryName());
+		this.setCreativeTab(Portal658.CREATIVE_TAB);
 	}
 }

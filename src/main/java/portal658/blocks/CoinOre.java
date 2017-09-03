@@ -4,6 +4,7 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -11,15 +12,16 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.IBlockAccess;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraft.world.World;
 import portal658.Portal658;
 import portal658.Reference;
 import portal658.blocks.blocklist.ListCoinOres;
@@ -35,17 +37,18 @@ public class CoinOre extends Block
 	public CoinOre()
 	{
 		super(Material.ROCK);
-		setUnlocalizedName(Reference.Portal658Blocks.COIN_ORE.getUnlocalizedName());
-		setRegistryName(Reference.Portal658Blocks.COIN_ORE.getRegistryName());
-		setCreativeTab(Portal658.CREATIVE_TAB);
+		this.setUnlocalizedName(Reference.Portal658Blocks.COIN_ORE.getUnlocalizedName());
+		this.setRegistryName(Reference.Portal658Blocks.COIN_ORE.getRegistryName());
 		this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE,  ListCoinOres.COPPER));
-		setHardness(2);
+		this.setCreativeTab(Portal658.CREATIVE_TAB);
+		this.setHardness(3);
+		this.setHarvestLevel();
 	}
 	
 	@Override
 	protected BlockStateContainer createBlockState()
 	{
-		return new BlockStateContainer(this, TYPE);
+		return new BlockStateContainer(this, new IProperty[] {TYPE});
 	}
 	
 	@Override
@@ -62,16 +65,18 @@ public class CoinOre extends Block
 	}
 	
 	@Override
-	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> items)
 	{
-		if (tab == Portal658.CREATIVE_TAB)
+		for (int i = 0; i < coinOres.length; ++i)
 		{
-			for (int i = 0; i < coinOres.length; ++i)
-			{
-				items.add(new ItemStack(this, 1, i));
-			}
+			items.add(new ItemStack(this, 1, i));
 		}
+	}
+	
+	@Override
+	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player)
+	{
+		return new ItemStack(Item.getItemFromBlock(this), 1, getMetaFromState(world.getBlockState(pos)));
 	}
 	
 	public static void registerItemVariants(Block block)
@@ -151,6 +156,14 @@ public class CoinOre extends Block
 		else
 		{
 			return MathHelper.getInt(rand, 0, 2);
+		}
+	}
+	
+	private void setHarvestLevel()
+	{
+		for (ListCoinOres list : ListCoinOres.values())
+		{
+			this.setHarvestLevel("pickaxe", list.getHarvestLevel(), this.blockState.getBaseState().withProperty(TYPE,  list));
 		}
 	}
 }

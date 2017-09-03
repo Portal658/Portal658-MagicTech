@@ -21,8 +21,8 @@ public class CraftingComponent extends Item
 	
 	public CraftingComponent()
 	{
-		setUnlocalizedName(Reference.Portal658Items.CRAFTING_COMPONENT.getUnlocalizedName());
-		setRegistryName(Reference.Portal658Items.CRAFTING_COMPONENT.getRegistryName());
+		this.setUnlocalizedName(Reference.Portal658Items.CRAFTING_COMPONENT.getUnlocalizedName());
+		this.setRegistryName(Reference.Portal658Items.CRAFTING_COMPONENT.getRegistryName());
 		this.setHasSubtypes(true);
 		this.setCreativeTab(Portal658.CREATIVE_TAB);
 	}

@@ -8,8 +8,8 @@ public class Morovizka extends Item
 {
 	public Morovizka()
 	{
-		setUnlocalizedName(Reference.Portal658Items.MOROVIZKA.getUnlocalizedName());
-		setRegistryName(Reference.Portal658Items.MOROVIZKA.getRegistryName());
-		setCreativeTab(Portal658.CREATIVE_TAB);
+		this.setUnlocalizedName(Reference.Portal658Items.MOROVIZKA.getUnlocalizedName());
+		this.setRegistryName(Reference.Portal658Items.MOROVIZKA.getRegistryName());
+		this.setCreativeTab(Portal658.CREATIVE_TAB);
 	}
 }

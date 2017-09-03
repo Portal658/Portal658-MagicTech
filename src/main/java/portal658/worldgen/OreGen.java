@@ -2,7 +2,6 @@ package portal658.worldgen;
 
 import java.util.Random;
 
-import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -10,7 +9,6 @@ import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
-import portal658.blocks.BlockBerti;
 import portal658.blocks.blocklist.ListCoinOres;
 import portal658.init.ModBlocks;
 

@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "portal658:blocks/parrot"
+        "all": "portal658:blocks/misc/thaumium_block"
     }
 }

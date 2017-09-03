@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "portal658:blocks/ruvon"
+        "all": "portal658:blocks/misc/morda"
     }
 }

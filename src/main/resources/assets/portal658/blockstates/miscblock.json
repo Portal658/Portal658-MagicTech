@@ -1,0 +1,13 @@
+{
+    "variants": {
+        "type=askarinka": { "model": "portal658:misc/askarinka" },
+		"type=berti": { "model": "portal658:misc/berti" },
+		"type=gotoman": { "model": "portal658:misc/gotoman" },
+		"type=lavrusha": { "model": "portal658:misc/lavrusha" },
+		"type=morda": { "model": "portal658:misc/morda" },
+		"type=morovizka": { "model": "portal658:misc/morovizka" },
+		"type=parrot": { "model": "portal658:misc/parrot" },
+		"type=ruvon": { "model": "portal658:misc/ruvon" },
+		"type=thaumium_block": { "model": "portal658:misc/thaumium_block" }
+    }
+}

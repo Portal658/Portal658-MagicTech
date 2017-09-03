@@ -40,15 +40,7 @@ public class Reference {
 	public static enum Portal658Blocks
 	{
 		COIN_ORE("coinOre", "coinOre"),
-		LAVRUSHA("lavrusha", "BlockLavrusha"),
-		PARROT("parrot", "BlockParrot"),
-		UNIFICATED_THAUMIUM_BLOCK("unificated_thaumium_block", "BlockUnificated_thaumium_block"),
-		MOROVIZKA("morovizka", "BlockMorovizka"),
-		ASKARINKA("askarinka", "BlockAskarinka"),
-		GOTOMAN("gotoman", "BlockGotoman"),
-		MORDA("morda", "BlockMorda"),
-		BERTI("berti", "BlockBerti"),
-		RUVON("ruvon", "BlockRuvon");
+		MISCBLOCK("miscBlock", "miscBlock");
 		
 		private String unlocalizedName;
 		private String registryName;

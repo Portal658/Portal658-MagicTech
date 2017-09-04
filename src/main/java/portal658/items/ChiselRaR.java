@@ -1,6 +1,7 @@
 package portal658.items;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
@@ -28,5 +29,11 @@ public class ChiselRaR extends Item
 	{
 		player.sendMessage(new TextComponentString("Chisel.rar otkrit, fotki mojno naiti v papke minecraft/fotki_gotomana"));
 		return super.onItemUse(player, worldIn, pos, hand, facing, hitX, hitY, hitZ);
+	}
+	
+	@Override
+	public EnumRarity getRarity(ItemStack stack)
+	{
+		return EnumRarity.EPIC;
 	}
 }

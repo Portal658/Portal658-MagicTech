@@ -18,9 +18,7 @@ import portal658.Reference;
 import portal658.items.itemlist.ListBasicCoins;
 
 public class BasicCoin extends Item
-{
-	public static final ListBasicCoins[] basicCoins = ListBasicCoins.values();
-	
+{	
 	public BasicCoin()
 	{
 		this.setUnlocalizedName(Reference.Portal658Items.BASIC_COIN.getUnlocalizedName());
@@ -31,7 +29,7 @@ public class BasicCoin extends Item
 	@Override
 	public String getUnlocalizedName(ItemStack stack)
 	{
-		return "item." + basicCoins[stack.getItemDamage()].getName();
+		return "item." + ListBasicCoins.values()[stack.getItemDamage()].getName();
 	}
 	
 	@Override
@@ -43,7 +41,7 @@ public class BasicCoin extends Item
 	@Override
 	public EnumRarity getRarity(ItemStack stack)
 	{
-		return basicCoins[stack.getItemDamage()].getRarity();
+		return ListBasicCoins.values()[stack.getItemDamage()].getRarity();
 	}
 
 	@Override
@@ -52,7 +50,7 @@ public class BasicCoin extends Item
 	{
 		if (tab == Portal658.CREATIVE_TAB)
 		{
-			for (int i = 0; i < basicCoins.length; ++i)
+			for (int i = 0; i < ListBasicCoins.values().length; ++i)
 			{
 				items.add(new ItemStack(this, 1, i));
 			}

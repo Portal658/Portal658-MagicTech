@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "portal658:basicCoin",
+			"data": 6
+        },
+		{
+            "item": "portal658:basicCoin",
+			"data": 6
+        },
+		{
+            "item": "portal658:basicCoin",
+			"data": 6
+        },
+		{
+            "item": "portal658:basicCoin",
+			"data": 6
+        }
+    ],
+    "result": {
+        "item": "portal658:basicCoin",
+		"data": 7
+    }
+}

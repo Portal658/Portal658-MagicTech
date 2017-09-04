@@ -18,9 +18,7 @@ import portal658.Reference;
 import portal658.items.itemlist.ListOtherCoins;
 
 public class OtherCoin extends Item
-{
-	public static final ListOtherCoins[] otherCoins = ListOtherCoins.values();
-	
+{	
 	public OtherCoin()
 	{
 		this.setUnlocalizedName(Reference.Portal658Items.OTHER_COIN.getUnlocalizedName());
@@ -31,7 +29,7 @@ public class OtherCoin extends Item
 	@Override
 	public String getUnlocalizedName(ItemStack stack)
 	{
-		return "item." + otherCoins[stack.getItemDamage()].getName();
+		return "item." + ListOtherCoins.values()[stack.getItemDamage()].getName();
 	}
 	
 	@Override
@@ -43,7 +41,7 @@ public class OtherCoin extends Item
 	@Override
 	public EnumRarity getRarity(ItemStack stack)
 	{
-		return otherCoins[stack.getItemDamage()].getRarity();
+		return ListOtherCoins.values()[stack.getItemDamage()].getRarity();
 	}
 	
 	@Override
@@ -52,7 +50,7 @@ public class OtherCoin extends Item
 	{
 		if (tab == Portal658.CREATIVE_TAB)
 		{
-			for (int i = 0; i < otherCoins.length; ++i)
+			for (int i = 0; i < ListOtherCoins.values().length; ++i)
 			{
 				items.add(new ItemStack(this, 1, i));
 			}

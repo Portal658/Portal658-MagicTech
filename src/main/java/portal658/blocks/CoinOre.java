@@ -31,7 +31,6 @@ import portal658.items.itemlist.ListOtherCoins;
 
 public class CoinOre extends Block
 {
-	public static final ListCoinOres[] coinOres = ListCoinOres.values();
 	public static final PropertyEnum TYPE = PropertyEnum.create("type", ListCoinOres.class);
 	
 	public CoinOre()
@@ -67,7 +66,7 @@ public class CoinOre extends Block
 	@Override
 	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> items)
 	{
-		for (int i = 0; i < coinOres.length; ++i)
+		for (int i = 0; i < ListCoinOres.values().length; ++i)
 		{
 			items.add(new ItemStack(this, 1, i));
 		}

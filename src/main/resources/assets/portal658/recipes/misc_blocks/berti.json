@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "111",
+        "232",
+        "111"
+    ],
+    "key": {
+        "1": {
+            "item": "portal658:basiccoin",
+			"data": 4
+        },
+        "2": {
+            "item": "portal658:othercoin",
+			"data": 1
+        },
+		 "3": {
+            "item": "minecraft:dirt",
+			"data": 0
+        }
+    },
+    "result": {
+        "item": "portal658:miscblock",
+		"data": 1
+    }
+}

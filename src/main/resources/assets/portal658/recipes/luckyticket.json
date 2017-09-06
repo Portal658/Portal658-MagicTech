@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " 1 ",
+        "121",
+        " 1 "
+    ],
+    "key": {
+        "1": {
+            "item": "portal658:basiccoin",
+			"data": 2
+        },
+        "2": {
+            "item": "minecraft:paper"
+        }
+    },
+    "result": {
+        "item": "portal658:luckyticket"
+    }
+}

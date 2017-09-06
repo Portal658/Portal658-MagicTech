@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "121",
+        "232",
+        "121"
+    ],
+    "key": {
+        "1": {
+            "item": "portal658:othercoin",
+			"data": 0
+        },
+        "2": {
+            "item": "portal658:luckyticket"
+        },
+		 "3": {
+            "item": "minecraft:nether_star"
+        }
+    },
+    "result": {
+        "item": "portal658:chisel_rar"
+    }
+}

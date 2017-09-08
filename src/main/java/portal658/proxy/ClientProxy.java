@@ -17,7 +17,7 @@ public class ClientProxy extends CommonProxy
     public void preInit(FMLPreInitializationEvent event)
     {
         super.preInit(event);
-        ModItems. registerItemVariants();
+        ModItems.registerItemVariants();
         ModBlocks.registerItemVariants();
     }
 

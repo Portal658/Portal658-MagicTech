@@ -8,8 +8,9 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
+import portal658.commands.CalculatorCommand;
 import portal658.init.ModBlocks;
-import portal658.init.ModCrafting;
 import portal658.init.ModItems;
 import portal658.proxy.CommonProxy;
 
@@ -37,7 +38,6 @@ public class Portal658
 	public void Init(FMLInitializationEvent event)
 	{
 		proxy.init(event);
-		ModCrafting.register();
 	}
 	
 	@EventHandler
@@ -46,4 +46,10 @@ public class Portal658
 		proxy.postInit(event);
 		System.out.println("Mod load successfully!");
 	}
+	
+	@EventHandler
+	public void serverLoad(FMLServerStartingEvent event)
+	{
+        event.registerServerCommand(new CalculatorCommand());
+    }
 }

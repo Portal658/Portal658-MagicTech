@@ -1,5 +1,7 @@
 package portal658.blocks;
 
+import java.util.List;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -17,6 +19,7 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import portal658.Portal658;
 import portal658.Reference;
@@ -73,7 +76,7 @@ public class MiscBlock extends Block
 	public static void registerItemVariants(Block block)
 	{
 		ResourceLocation[] rl_miscblocks = new ResourceLocation[ListMiscBlocks.values().length];
-		for(ListMiscBlocks list : ListMiscBlocks.values())
+		for (ListMiscBlocks list : ListMiscBlocks.values())
         {
 			ResourceLocation location = new ResourceLocation("portal658:misc/" + list.getName());
 			rl_miscblocks[list.getMetadata()] = location;
@@ -83,10 +86,16 @@ public class MiscBlock extends Block
 	
 	public static void registerRender(Block block)
 	{
-		for(ListMiscBlocks list : ListMiscBlocks.values())
+		for (ListMiscBlocks list : ListMiscBlocks.values())
         {
 			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block),
 				list.getMetadata(), new ModelResourceLocation("portal658:misc/" + list.getName(), "inventory"));
         }
+	}
+
+	@Override
+	public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune)
+	{
+		drops.add(new ItemStack(this, 1, getMetaFromState(state)));
 	}
 }

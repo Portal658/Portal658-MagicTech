@@ -47,15 +47,15 @@ public class CalculatorCommand extends CommandBase
 			if (sender instanceof EntityPlayer)
 			{
 				sender.sendMessage(new TextComponentString("Calc: " + command + " = " + result));
-	        }
+			}
 		}
 	}
 	
 	@Override
     public boolean checkPermission(MinecraftServer server, ICommandSender sender)
 	{
-        return true;
-    }
+		return true;
+	}
 
 	private double Calculator(String command)
 	{

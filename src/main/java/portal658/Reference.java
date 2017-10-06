@@ -3,7 +3,7 @@ package portal658;
 public class Reference {
 	public static final String MOD_ID = "portal658";
 	public static final String NAME = "Portal658 - MagicTech";
-	public static final String ACCEPTED_VERSION = "[1.12, 1.12.1]";
+	public static final String ACCEPTED_VERSION = "[1.12.2]";
 	
 	public static final String CLIENT_PROXY_CLASS = "portal658.proxy.ClientProxy";
 	public static final String SERVER_PROXY_CLASS = "portal658.proxy.ServerProxy";

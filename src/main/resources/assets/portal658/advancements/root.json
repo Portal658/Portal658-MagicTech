@@ -1,0 +1,29 @@
+{
+    "display": {
+        "icon": {
+            "item": "portal658:basiccoin",
+			"data": 5
+        },
+        "title": {
+            "translate": "advancements.portal658.root.title"
+        },
+        "description": {
+            "translate": "advancements.portal658.root.description"
+        },
+        "background": "minecraft:textures/blocks/brick.png",
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+	"criteria": {
+        "get_coin": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+					{
+						"item": "portal658:basiccoin"
+					}
+				]	
+            }
+        }
+    }
+}

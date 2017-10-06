@@ -1,4 +1,6 @@
+#CreativeTabs
 itemGroup.portal658=Portal658-MagicTech
+#Items
 item.copper_coin.name=Медная Монета
 item.iron_coin.name=Железная Монета
 item.silver_coin.name=Серебряная Монета
@@ -22,6 +24,7 @@ item.chisel_rar.name=Чизел.рар
 item.superconductor.name=Сверхпроводник
 item.super_circuit.name=Супер-микросхема
 item.magical_orb.name=Магический шар
+#Blocks
 tile.coinore_copper.name=Медная Монетная Руда
 tile.coinore_iron.name=Железная Монетная Руда
 tile.coinore_silver.name=Серебряная Монетная Руда
@@ -35,3 +38,22 @@ tile.miscblock_gotoman.name=Блок из Готомана
 tile.miscblock_morda.name=Блок из Морды
 tile.miscblock_berti.name=Блок из Берти
 tile.miscblock_ruvon.name=Блок из Рувона
+#Advancements
+advancements.portal658.root.title=Portal658-MagicTech
+advancements.portal658.root.description=Portal658-MagicTech
+advancements.portal658.coin_copper.title=Медная монета
+advancements.portal658.coin_copper.description=Получите медную монету
+advancements.portal658.coin_iron.title=Железная монета
+advancements.portal658.coin_iron.description=Получите железную монету
+advancements.portal658.coin_silver.title=Серебряная монета
+advancements.portal658.coin_silver.description=Получите серебряную монету
+advancements.portal658.coin_gold.title=Золотая монета
+advancements.portal658.coin_gold.description=Получите золотую монету
+advancements.portal658.coin_platinum.title=Платиновая монета
+advancements.portal658.coin_platinum.description=Получите платиновую монету
+advancements.portal658.coin_osmium.title=Осмиевая монета
+advancements.portal658.coin_osmium.description=Получите осмиевую монету
+advancements.portal658.coin_naquadah.title=Наквадаховая монета
+advancements.portal658.coin_naquadah.description=Получите наквадаховую монету
+advancements.portal658.coin_neutronium.title=Нейтронная монета
+advancements.portal658.coin_neutronium.description=Получите нейтронную монету

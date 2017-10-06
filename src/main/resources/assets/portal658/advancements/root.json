@@ -11,11 +11,11 @@
             "translate": "advancements.portal658.root.description"
         },
         "background": "minecraft:textures/blocks/brick.png",
-        "show_toast": true,
-        "announce_to_chat": true
+        "show_toast": false,
+        "announce_to_chat": false
     },
 	"criteria": {
-        "get_coin": {
+        "get_basiccoin": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
@@ -24,6 +24,22 @@
 					}
 				]	
             }
+        },
+		"get_othercoin": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+					{
+						"item": "portal658:othercoin"
+					}
+				]	
+            }
         }
-    }
+    },
+	"requirements": [
+        [
+            "get_othercoin",
+            "get_basiccoin"
+        ]
+    ]
 }

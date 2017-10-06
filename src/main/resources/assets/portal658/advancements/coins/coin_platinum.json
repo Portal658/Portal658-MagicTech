@@ -1,0 +1,31 @@
+{
+    "display": {
+        "icon": {
+            "item": "portal658:basiccoin",
+            "data": 4
+        },
+        "title": {
+            "translate": "advancements.portal658.coin_platinum.title"
+        },
+        "description": {
+            "translate": "advancements.portal658.coin_platinum.description"
+        }
+    },
+    "parent": "portal658:coins/coin_gold",
+	"rewards": {
+        "experience": 100
+    },
+    "criteria": {
+        "get_coin": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+					{
+						"item": "portal658:basiccoin",
+						"data": 4
+					}
+				]	
+            }
+        }
+    }
+}

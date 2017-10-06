@@ -1,4 +1,6 @@
+#CreativeTabs
 itemGroup.portal658=Portal658-MagicTech
+#Items
 item.copper_coin.name=Copper Coin
 item.iron_coin.name=Iron Coin
 item.silver_coin.name=Silver Coin
@@ -22,6 +24,7 @@ item.chisel_rar.name=Chisel.rar
 item.superconductor.name=Superconductor
 item.super_circuit.name=Super Circuit
 item.magical_orb.name=Magical Orb
+#Blocks
 tile.coinore_copper.name=Copper Coin Ore
 tile.coinore_iron.name=Iron Coin Ore
 tile.coinore_silver.name=Silver Coin Ore
@@ -35,3 +38,22 @@ tile.miscblock_gotoman.name=Block of Gotoman
 tile.miscblock_morda.name=Block of Morda
 tile.miscblock_berti.name=Block of Berti
 tile.miscblock_ruvon.name=Block of Ruvon
+#Advancements
+advancements.portal658.root.title=Portal658-MagicTech
+advancements.portal658.root.description=Portal658-MagicTech
+advancements.portal658.coin_copper.title=Copper Coin
+advancements.portal658.coin_copper.description=Get a Copper Coin
+advancements.portal658.coin_iron.title=Iron Coin
+advancements.portal658.coin_iron.description=Get a Iron Coin
+advancements.portal658.coin_silver.title=Silver Coin
+advancements.portal658.coin_silver.description=Get a Silver Coin
+advancements.portal658.coin_gold.title=Gold Coin
+advancements.portal658.coin_gold.description=Get a Gold Coin
+advancements.portal658.coin_platinum.title=Platinum Coin
+advancements.portal658.coin_platinum.description=Get a Platinum Coin
+advancements.portal658.coin_osmium.title=Osmium Coin
+advancements.portal658.coin_osmium.description=Get a Osmium Coin
+advancements.portal658.coin_naquadah.title=Naquadah Coin
+advancements.portal658.coin_naquadah.description=Get a Naquadah Coin
+advancements.portal658.coin_neutronium.title=Neutronium Coin
+advancements.portal658.coin_neutronium.description=Get a Neutronium Coin

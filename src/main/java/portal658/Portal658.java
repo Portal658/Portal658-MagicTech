@@ -10,6 +10,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import portal658.commands.CalculatorCommand;
+import portal658.creativetab.Portal658CreativeTab;
 import portal658.init.ModBlocks;
 import portal658.init.ModItems;
 import portal658.proxy.CommonProxy;
@@ -26,7 +27,7 @@ public class Portal658
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
 	
-	public static final CreativeTabs CREATIVE_TAB = new Portal658Tab();
+	public static final CreativeTabs CREATIVE_TAB = new Portal658CreativeTab();
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)

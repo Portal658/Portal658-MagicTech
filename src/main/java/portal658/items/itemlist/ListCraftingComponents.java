@@ -4,28 +4,28 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;
 
-public enum ListCraftingComponents implements IStringSerializable
+public enum ListCraftingComponents implements IStringSerializable, ItemItemList
 {
-	MAGICAL_ORB("magical_orb", 0, EnumRarity.RARE),
-	SUPER_CIRCUIT("super_circuit", 1, EnumRarity.RARE),
-	SUPERCONDUCTOR("superconductor", 2, EnumRarity.RARE);
+	MAGICAL_ORB("magical_orb", EnumRarity.RARE),
+	SUPER_CIRCUIT("super_circuit", EnumRarity.RARE),
+	SUPERCONDUCTOR("superconductor", EnumRarity.RARE);
 	
 	private final String name;
 	private final EnumRarity rarity;
-	private int metadata;
     
-    private ListCraftingComponents(String name, int metadata, EnumRarity rarity)
+    private ListCraftingComponents(String name, EnumRarity rarity)
     {
         this.name = name;
-        this.metadata = metadata;
         this.rarity = rarity;
     }
     
+    @Override
     public int getMetadata()
     {
-    	return metadata;
+    	return this.ordinal();
     }
     
+    @Override
     public EnumRarity getRarity()
     {
     	return rarity;
@@ -35,5 +35,11 @@ public enum ListCraftingComponents implements IStringSerializable
 	public String getName()
 	{
 		return name;
+	}
+	
+	@Override
+	public String resourceLocation()
+	{
+		return "portal658:crafting/" + this.getName();
 	}
 }

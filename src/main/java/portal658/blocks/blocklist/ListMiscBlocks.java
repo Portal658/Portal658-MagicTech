@@ -3,25 +3,23 @@ package portal658.blocks.blocklist;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.util.IStringSerializable;
 
-public enum ListMiscBlocks implements IStringSerializable
+public enum ListMiscBlocks implements IStringSerializable, BlockItemList
 {
-	ASKARINKA("askarinka", 0, EnumRarity.UNCOMMON),
-	BERTI("berti", 1, EnumRarity.UNCOMMON),
-	GOTOMAN("gotoman", 2, EnumRarity.UNCOMMON),
-	LAVRUSHA("lavrusha", 3, EnumRarity.UNCOMMON),
-	MORDA("morda", 4, EnumRarity.UNCOMMON),
-	MOROVIZKA("morovizka", 5, EnumRarity.UNCOMMON),
-	PARROT("parrot", 6, EnumRarity.UNCOMMON),
-	RUVON("ruvon", 7, EnumRarity.UNCOMMON),
-	THAUMIUM_BLOCK("thaumium_block", 8, EnumRarity.UNCOMMON);
+	ASKARINKA("askarinka", EnumRarity.UNCOMMON),
+	BERTI("berti", EnumRarity.UNCOMMON),
+	GOTOMAN("gotoman", EnumRarity.UNCOMMON),
+	LAVRUSHA("lavrusha", EnumRarity.UNCOMMON),
+	MORDA("morda", EnumRarity.UNCOMMON),
+	MOROVIZKA("morovizka", EnumRarity.UNCOMMON),
+	PARROT("parrot", EnumRarity.UNCOMMON),
+	RUVON("ruvon", EnumRarity.UNCOMMON),
+	THAUMIUM_BLOCK("thaumium_block", EnumRarity.UNCOMMON);
 
-	private int metadata;
 	private String name;
 	private final EnumRarity rarity;
 	
-	private ListMiscBlocks(String name, int metadata, EnumRarity rarity)
+	private ListMiscBlocks(String name, EnumRarity rarity)
 	{
-		this.metadata = metadata;
 		this.name = name;
 		this.rarity = rarity;
 	}
@@ -32,9 +30,10 @@ public enum ListMiscBlocks implements IStringSerializable
 		return this.name;
 	}
 	
+	@Override
 	public int getMetadata()
 	{
-		return metadata;
+		return this.ordinal();
 	}
 	
 	@Override
@@ -42,9 +41,16 @@ public enum ListMiscBlocks implements IStringSerializable
 	{
 		return getName();
 	}
-
+	
+	@Override
 	public EnumRarity getRarity()
 	{
 		return rarity;
+	}
+	
+	@Override
+	public String resourceLocation()
+	{
+		return "portal658:misc/" + this.getName();
 	}
 }

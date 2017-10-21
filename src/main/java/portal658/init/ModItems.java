@@ -1,21 +1,24 @@
 package portal658.init;
 
+import java.util.Arrays;
+
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import portal658.items.LuckyTicket;
-import portal658.items.Morovizka;
-import portal658.items.OtherCoin;
-import portal658.items.itemlist.ListBasicCoins;
-import portal658.items.itemlist.ListOtherCoins;
 import portal658.items.BasicCoin;
 import portal658.items.ChiselRaR;
 import portal658.items.CraftingComponent;
+import portal658.items.LuckyTicket;
+import portal658.items.Morovizka;
+import portal658.items.OtherCoin;
+import portal658.items.itemlist.ItemItemList;
+import portal658.items.itemlist.ListBasicCoins;
+import portal658.items.itemlist.ListCraftingComponents;
+import portal658.items.itemlist.ListOtherCoins;
+import portal658.util.RegisterModel;
 
 public class ModItems
 {
@@ -25,6 +28,10 @@ public class ModItems
 	public static Item luckyTicket = new LuckyTicket();
 	public static Item morovizka = new Morovizka();
 	public static Item chisel_rar = new ChiselRaR();
+	
+	private static ItemItemList[] listBasicCoin = Arrays.copyOf(ListBasicCoins.values(), ListBasicCoins.values().length);
+	private static ItemItemList[] listOtherCoin = Arrays.copyOf(ListOtherCoins.values(), ListOtherCoins.values().length);
+	private static ItemItemList[] listCraftingComponent = Arrays.copyOf(ListCraftingComponents.values(), ListCraftingComponents.values().length);
 	
 	public static void register()
 	{
@@ -60,16 +67,16 @@ public class ModItems
 	@SideOnly(Side.CLIENT)
 	public static void registerItemVariants()
 	{
-		BasicCoin.registerItemVariants(basicCoin);
-		OtherCoin.registerItemVariants(otherCoin);
-		CraftingComponent.registerItemVariants(craftingComponent);
+		RegisterModel.registerItemVariants(basicCoin, listBasicCoin);
+		RegisterModel.registerItemVariants(otherCoin, listOtherCoin);
+		RegisterModel.registerItemVariants(craftingComponent, listCraftingComponent);
 	}
 	
 	@SideOnly(Side.CLIENT)
 	public static void setRender_withMetaData()
 	{
-		BasicCoin.registerRender(basicCoin);
-		OtherCoin.registerRender(otherCoin);
-		CraftingComponent.registerRender(craftingComponent);
+		RegisterModel.registerRender(basicCoin, listBasicCoin);
+		RegisterModel.registerRender(otherCoin, listOtherCoin);
+		RegisterModel.registerRender(craftingComponent, listCraftingComponent);
 	}
 }

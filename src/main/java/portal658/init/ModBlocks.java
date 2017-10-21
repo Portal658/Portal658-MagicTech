@@ -1,5 +1,7 @@
 package portal658.init;
 
+import java.util.Arrays;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -10,13 +12,20 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import portal658.blocks.CoinOre;
 import portal658.blocks.MiscBlock;
+import portal658.blocks.blocklist.BlockItemList;
+import portal658.blocks.blocklist.ListCoinOres;
+import portal658.blocks.blocklist.ListMiscBlocks;
 import portal658.blocks.itemblocks.ItemBlockCoinOre;
 import portal658.blocks.itemblocks.ItemBlockMiscBlock;
+import portal658.util.RegisterModel;
 
 public class ModBlocks
 {
 	public static Block coinOre = new CoinOre();
 	public static Block miscBlock = new MiscBlock();
+	
+	private static BlockItemList[] listCoinOre = Arrays.copyOf(ListCoinOres.values(), ListCoinOres.values().length);
+	private static BlockItemList[] listMiscBlock = Arrays.copyOf(ListMiscBlocks.values(), ListMiscBlocks.values().length);
 	
 	public static void register()
 	{
@@ -52,14 +61,14 @@ public class ModBlocks
 	@SideOnly(Side.CLIENT)
 	public static void registerItemVariants()
 	{
-		CoinOre.registerItemVariants(coinOre);
-		MiscBlock.registerItemVariants(miscBlock);
+		RegisterModel.registerItemVariants(coinOre, listCoinOre);
+		RegisterModel.registerItemVariants(miscBlock, listMiscBlock);
 	}
 	
 	@SideOnly(Side.CLIENT)
 	public static void setRender_withMetaData()
 	{
-		CoinOre.registerRender(coinOre);
-		MiscBlock.registerRender(miscBlock);
+		RegisterModel.registerRender(coinOre, listCoinOre);
+		RegisterModel.registerRender(miscBlock, listMiscBlock);
 	}
 }

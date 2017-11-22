@@ -69,10 +69,7 @@ public class CalculatorCommand extends CommandBase
 			}
 			return true;
 		}
-		else
-		{
-			return false;
-		}
+		return false;
 	}
 	
 	private double calculator(String command)

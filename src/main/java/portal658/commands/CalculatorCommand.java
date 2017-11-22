@@ -5,13 +5,13 @@ import java.util.LinkedList;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;
+import net.minecraft.command.WrongUsageException;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.text.TextComponentString;
 
 public class CalculatorCommand extends CommandBase
 {
-
 	@Override
 	public String getName()
 	{
@@ -25,39 +25,57 @@ public class CalculatorCommand extends CommandBase
 	}
 
 	@Override
-	public void execute(MinecraftServer server, ICommandSender sender, String[] args) throws CommandException
-	{
-		boolean flag_rpn = true; 
-		String command = args[0];
-		for (int i = 0; i < command.length(); ++i)
-		{
-			int symbol_code = command.charAt(i);
-			if (!((symbol_code > 39 && symbol_code < 44) || (symbol_code > 44 && symbol_code < 58)))
-			{
-				flag_rpn = false;
-				break;
-			}
-		}
-		System.out.println(flag_rpn);
-		System.out.println(command);
-		if (flag_rpn)
-		{
-			double result = Calculator(command);
-			System.out.println(result);
-			if (sender instanceof EntityPlayer)
-			{
-				sender.sendMessage(new TextComponentString("Calc: " + command + " = " + result));
-			}
-		}
-	}
-	
-	@Override
     public boolean checkPermission(MinecraftServer server, ICommandSender sender)
 	{
 		return true;
 	}
-
-	private double Calculator(String command)
+	
+	@Override
+	public void execute(MinecraftServer server, ICommandSender sender, String[] args) throws CommandException
+	{
+		if (args.length == 1 && isCorrectCommand(args[0]))
+		{
+			try
+			{
+				String command = args[0];
+				double result = calculator(command);
+				if (sender instanceof EntityPlayer)
+				{
+					sender.sendMessage(new TextComponentString("Calc: " + command + " = " + result));
+				}
+			}
+			catch(Exception e)
+			{
+				throw new WrongUsageException("commands.calc.usage", new Object[0]);
+			}
+		}
+		else
+		{
+			throw new WrongUsageException("commands.calc.usage", new Object[0]);
+		}
+	}
+	
+	private boolean isCorrectCommand(String command)
+	{
+		if (!command.isEmpty())
+		{
+			for (int i = 0; i < command.length(); ++i)
+			{
+				int symbol_code = command.charAt(i);
+				if (!((symbol_code > 39 && symbol_code < 44) || (symbol_code > 44 && symbol_code < 58)))
+				{
+					return false;
+				}
+			}
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	private double calculator(String command)
 	{
 		LinkedList<Double> someDoubles = new LinkedList<>();
 		LinkedList<Character> someOpers = new LinkedList<>();

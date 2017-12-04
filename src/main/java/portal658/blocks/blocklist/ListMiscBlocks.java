@@ -13,6 +13,7 @@ public enum ListMiscBlocks implements IStringSerializable, BlockItemList
 	MOROVIZKA("morovizka", EnumRarity.UNCOMMON),
 	PARROT("parrot", EnumRarity.UNCOMMON),
 	RUVON("ruvon", EnumRarity.UNCOMMON),
+	STEELMAN("steelman", EnumRarity.UNCOMMON),
 	THAUMIUM_BLOCK("thaumium_block", EnumRarity.UNCOMMON);
 
 	private String name;

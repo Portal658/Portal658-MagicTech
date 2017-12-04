@@ -8,6 +8,7 @@
 		"type=morovizka": { "model": "portal658:misc/morovizka" },
 		"type=parrot": { "model": "portal658:misc/parrot" },
 		"type=ruvon": { "model": "portal658:misc/ruvon" },
+		"type=steelman": { "model": "portal658:misc/steelman" },
 		"type=thaumium_block": { "model": "portal658:misc/thaumium_block" }
     }
 }

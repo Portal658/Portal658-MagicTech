@@ -38,6 +38,7 @@ tile.miscblock_gotoman.name=Block of Gotoman
 tile.miscblock_morda.name=Block of Morda
 tile.miscblock_berti.name=Block of Berti
 tile.miscblock_ruvon.name=Block of Ruvon
+tile.miscblock_steelman.name=Block of SteelMan
 #Advancements
 advancements.portal658.root.title=Portal658-MagicTech
 advancements.portal658.root.description=Portal658-MagicTech

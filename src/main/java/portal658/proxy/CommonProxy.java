@@ -4,6 +4,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import portal658.handlers.OreDictionaryHandler;
 import portal658.init.ModBlocks;
 import portal658.init.ModItems;
 import portal658.worldgen.OreGen;
@@ -19,7 +20,7 @@ public class CommonProxy
 
     public void init(FMLInitializationEvent event)
     {
-
+		OreDictionaryHandler.registerOreDictionary();
     }
 
     public void postInit(FMLPostInitializationEvent event)

@@ -8,7 +8,7 @@
     "key": {
         "1": {
             "item": "portal658:basiccoin",
-			"data": 3
+			"data": 4
         },
         "2": {
             "item": "portal658:othercoin",
@@ -20,6 +20,6 @@
     },
     "result": {
         "item": "portal658:miscblock",
-		"data": 7
+		"data": 8
     }
 }

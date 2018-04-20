@@ -12,20 +12,19 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import portal658.blocks.CoinOre;
 import portal658.blocks.MiscBlock;
-import portal658.blocks.blocklist.BlockItemList;
 import portal658.blocks.blocklist.ListCoinOres;
 import portal658.blocks.blocklist.ListMiscBlocks;
 import portal658.blocks.itemblocks.ItemBlockCoinOre;
 import portal658.blocks.itemblocks.ItemBlockMiscBlock;
+import portal658.util.ItemList;
 import portal658.util.RegisterModel;
 
 public class ModBlocks {
 	public static Block coinOre = new CoinOre();
 	public static Block miscBlock = new MiscBlock();
 
-	private static BlockItemList[] listCoinOre = Arrays.copyOf(ListCoinOres.values(), ListCoinOres.values().length);
-	private static BlockItemList[] listMiscBlock = Arrays.copyOf(ListMiscBlocks.values(),
-			ListMiscBlocks.values().length);
+	private static ItemList[] listCoinOre = Arrays.copyOf(ListCoinOres.values(), ListCoinOres.values().length);
+	private static ItemList[] listMiscBlock = Arrays.copyOf(ListMiscBlocks.values(), ListMiscBlocks.values().length);
 
 	public static void register() {
 		setRegister(coinOre, new ItemBlockCoinOre(coinOre));

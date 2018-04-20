@@ -2,8 +2,9 @@ package portal658.blocks.blocklist;
 
 import net.minecraft.item.EnumRarity;
 import net.minecraft.util.IStringSerializable;
+import portal658.util.ItemList;
 
-public enum ListCoinOres implements IStringSerializable,BlockItemList {
+public enum ListCoinOres implements IStringSerializable,ItemList {
 	COPPER("copper", 1, EnumRarity.COMMON),
 	IRON("iron", 1, EnumRarity.COMMON),
 	SILVER("silver", 1, EnumRarity.UNCOMMON),

@@ -14,10 +14,10 @@ import portal658.items.CraftingComponent;
 import portal658.items.LuckyTicket;
 import portal658.items.Morovizka;
 import portal658.items.OtherCoin;
-import portal658.items.itemlist.ItemItemList;
 import portal658.items.itemlist.ListBasicCoins;
 import portal658.items.itemlist.ListCraftingComponents;
 import portal658.items.itemlist.ListOtherCoins;
+import portal658.util.ItemList;
 import portal658.util.RegisterModel;
 
 public class ModItems {
@@ -28,11 +28,9 @@ public class ModItems {
 	public static Item morovizka = new Morovizka();
 	public static Item chisel_rar = new ChiselRaR();
 
-	private static ItemItemList[] listBasicCoin = Arrays.copyOf(ListBasicCoins.values(),
-			ListBasicCoins.values().length);
-	private static ItemItemList[] listOtherCoin = Arrays.copyOf(ListOtherCoins.values(),
-			ListOtherCoins.values().length);
-	private static ItemItemList[] listCraftingComponent = Arrays.copyOf(ListCraftingComponents.values(),
+	private static ItemList[] listBasicCoin = Arrays.copyOf(ListBasicCoins.values(), ListBasicCoins.values().length);
+	private static ItemList[] listOtherCoin = Arrays.copyOf(ListOtherCoins.values(), ListOtherCoins.values().length);
+	private static ItemList[] listCraftingComponent = Arrays.copyOf(ListCraftingComponents.values(),
 			ListCraftingComponents.values().length);
 
 	public static void register() {

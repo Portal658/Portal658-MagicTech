@@ -2,8 +2,9 @@ package portal658.items.itemlist;
 
 import net.minecraft.item.EnumRarity;
 import net.minecraft.util.IStringSerializable;
+import portal658.util.ItemList;
 
-public enum ListCraftingComponents implements IStringSerializable,ItemItemList {
+public enum ListCraftingComponents implements IStringSerializable,ItemList {
 	MAGICAL_ORB("magical_orb", EnumRarity.RARE),
 	SUPER_CIRCUIT("super_circuit", EnumRarity.RARE),
 	SUPERCONDUCTOR("superconductor", EnumRarity.RARE);

@@ -2,8 +2,9 @@ package portal658.blocks.blocklist;
 
 import net.minecraft.item.EnumRarity;
 import net.minecraft.util.IStringSerializable;
+import portal658.util.ItemList;
 
-public enum ListMiscBlocks implements IStringSerializable,BlockItemList {
+public enum ListMiscBlocks implements IStringSerializable,ItemList {
 	ASKARINKA("askarinka", EnumRarity.UNCOMMON),
 	BERTI("berti", EnumRarity.UNCOMMON),
 	GOTOMAN("gotoman", EnumRarity.UNCOMMON),

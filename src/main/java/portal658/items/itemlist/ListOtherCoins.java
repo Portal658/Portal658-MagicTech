@@ -2,8 +2,9 @@ package portal658.items.itemlist;
 
 import net.minecraft.item.EnumRarity;
 import net.minecraft.util.IStringSerializable;
+import portal658.util.ItemList;
 
-public enum ListOtherCoins implements IStringSerializable,ItemItemList {
+public enum ListOtherCoins implements IStringSerializable,ItemList {
 	ZAMBIA_COIN("zambia_coin", EnumRarity.UNCOMMON),
 	ERROR_COIN("error_coin", EnumRarity.UNCOMMON),
 	RADIACTIVE_COIN("radiactive_coin", EnumRarity.UNCOMMON),

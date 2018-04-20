@@ -3,8 +3,7 @@ package portal658.blocks.blocklist;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.util.IStringSerializable;
 
-public enum ListMiscBlocks implements IStringSerializable, BlockItemList
-{
+public enum ListMiscBlocks implements IStringSerializable,BlockItemList {
 	ASKARINKA("askarinka", EnumRarity.UNCOMMON),
 	BERTI("berti", EnumRarity.UNCOMMON),
 	GOTOMAN("gotoman", EnumRarity.UNCOMMON),
@@ -18,40 +17,34 @@ public enum ListMiscBlocks implements IStringSerializable, BlockItemList
 
 	private String name;
 	private final EnumRarity rarity;
-	
-	private ListMiscBlocks(String name, EnumRarity rarity)
-	{
+
+	private ListMiscBlocks(String name, EnumRarity rarity) {
 		this.name = name;
 		this.rarity = rarity;
 	}
-	
+
 	@Override
-	public String getName()
-	{
+	public String getName() {
 		return this.name;
 	}
-	
+
 	@Override
-	public int getMetadata()
-	{
+	public int getMetadata() {
 		return this.ordinal();
 	}
-	
+
 	@Override
-	public String toString()
-	{
+	public String toString() {
 		return getName();
 	}
-	
+
 	@Override
-	public EnumRarity getRarity()
-	{
+	public EnumRarity getRarity() {
 		return rarity;
 	}
-	
+
 	@Override
-	public String resourceLocation()
-	{
+	public String resourceLocation() {
 		return "portal658:misc/" + this.getName();
 	}
 }

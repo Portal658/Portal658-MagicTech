@@ -3,8 +3,7 @@ package portal658.blocks.blocklist;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.util.IStringSerializable;
 
-public enum ListCoinOres implements IStringSerializable, BlockItemList
-{
+public enum ListCoinOres implements IStringSerializable,BlockItemList {
 	COPPER("copper", 1, EnumRarity.COMMON),
 	IRON("iron", 1, EnumRarity.COMMON),
 	SILVER("silver", 1, EnumRarity.UNCOMMON),
@@ -13,46 +12,39 @@ public enum ListCoinOres implements IStringSerializable, BlockItemList
 	private int harvestLevel;
 	private String name;
 	private final EnumRarity rarity;
-	
-	private ListCoinOres(String name, int harvestLevel, EnumRarity rarity)
-	{
+
+	private ListCoinOres(String name, int harvestLevel, EnumRarity rarity) {
 		this.name = name;
 		this.harvestLevel = harvestLevel;
 		this.rarity = rarity;
 	}
-	
+
 	@Override
-	public String getName()
-	{
+	public String getName() {
 		return this.name;
 	}
-	
+
 	@Override
-	public int getMetadata()
-	{
+	public int getMetadata() {
 		return this.ordinal();
 	}
-	
+
 	@Override
-	public String toString()
-	{
+	public String toString() {
 		return getName();
 	}
-	
+
 	@Override
-	public EnumRarity getRarity()
-	{
+	public EnumRarity getRarity() {
 		return rarity;
 	}
-	
+
 	@Override
-	public String resourceLocation()
-	{
+	public String resourceLocation() {
 		return "portal658:ores/coinore_" + getName();
 	}
-	
-	public int getHarvestLevel()
-	{
+
+	public int getHarvestLevel() {
 		return harvestLevel;
 	}
 }

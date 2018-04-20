@@ -11,46 +11,37 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import portal658.commands.CalculatorCommand;
 import portal658.creativetab.Portal658CreativeTab;
-import portal658.init.ModBlocks;
-import portal658.init.ModItems;
 import portal658.proxy.CommonProxy;
-
-import java.lang.System;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, useMetadata = true, acceptedMinecraftVersions = Reference.ACCEPTED_VERSION)
 
-public class Portal658
-{
+public class Portal658 {
 	@Instance
 	public static Portal658 instance;
-	
+
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
-	
+
 	public static final CreativeTabs CREATIVE_TAB = new Portal658CreativeTab();
-	
+
 	@EventHandler
-	public void preInit(FMLPreInitializationEvent event)
-	{
+	public void preInit(FMLPreInitializationEvent event) {
 		proxy.preInit(event);
 	}
-	
+
 	@EventHandler
-	public void Init(FMLInitializationEvent event)
-	{
+	public void Init(FMLInitializationEvent event) {
 		proxy.init(event);
 	}
-	
+
 	@EventHandler
-	public void postInit(FMLPostInitializationEvent event)
-	{
+	public void postInit(FMLPostInitializationEvent event) {
 		proxy.postInit(event);
 		System.out.println("Mod load successfully!");
 	}
-	
+
 	@EventHandler
-	public void serverLoad(FMLServerStartingEvent event)
-	{
-        event.registerServerCommand(new CalculatorCommand());
-    }
+	public void serverLoad(FMLServerStartingEvent event) {
+		event.registerServerCommand(new CalculatorCommand());
+	}
 }

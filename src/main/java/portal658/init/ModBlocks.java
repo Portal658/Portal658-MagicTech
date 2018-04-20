@@ -19,55 +19,48 @@ import portal658.blocks.itemblocks.ItemBlockCoinOre;
 import portal658.blocks.itemblocks.ItemBlockMiscBlock;
 import portal658.util.RegisterModel;
 
-public class ModBlocks
-{
+public class ModBlocks {
 	public static Block coinOre = new CoinOre();
 	public static Block miscBlock = new MiscBlock();
-	
+
 	private static BlockItemList[] listCoinOre = Arrays.copyOf(ListCoinOres.values(), ListCoinOres.values().length);
-	private static BlockItemList[] listMiscBlock = Arrays.copyOf(ListMiscBlocks.values(), ListMiscBlocks.values().length);
-	
-	public static void register()
-	{
+	private static BlockItemList[] listMiscBlock = Arrays.copyOf(ListMiscBlocks.values(),
+			ListMiscBlocks.values().length);
+
+	public static void register() {
 		setRegister(coinOre, new ItemBlockCoinOre(coinOre));
 		setRegister(miscBlock, new ItemBlockMiscBlock(miscBlock));
 	}
-	
+
 	@SideOnly(Side.CLIENT)
-	public static void registerRenders()
-	{
+	public static void registerRenders() {
 		setRender_withMetaData();
 	}
-	
-	private static void setRegister(Block block)
-	{
+
+	private static void setRegister(Block block) {
 		ForgeRegistries.BLOCKS.register(block);
 		ForgeRegistries.ITEMS.register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
 	}
-	
-	private static void setRegister(Block block, ItemBlock itemblock)
-	{
+
+	private static void setRegister(Block block, ItemBlock itemblock) {
 		ForgeRegistries.BLOCKS.register(block);
 		ForgeRegistries.ITEMS.register(itemblock.setRegistryName(block.getRegistryName()));
 	}
-	
+
 	@SideOnly(Side.CLIENT)
-	private static void setRender(Block block)
-	{
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block),
-			0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
+	private static void setRender(Block block) {
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0,
+				new ModelResourceLocation(block.getRegistryName(), "inventory"));
 	}
-	
+
 	@SideOnly(Side.CLIENT)
-	public static void registerItemVariants()
-	{
+	public static void registerItemVariants() {
 		RegisterModel.registerItemVariants(coinOre, listCoinOre);
 		RegisterModel.registerItemVariants(miscBlock, listMiscBlock);
 	}
-	
+
 	@SideOnly(Side.CLIENT)
-	public static void setRender_withMetaData()
-	{
+	public static void setRender_withMetaData() {
 		RegisterModel.registerRender(coinOre, listCoinOre);
 		RegisterModel.registerRender(miscBlock, listMiscBlock);
 	}

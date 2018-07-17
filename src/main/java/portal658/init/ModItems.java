@@ -8,6 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import portal658.configuration.Config;
 import portal658.items.BasicCoin;
 import portal658.items.ChiselRaR;
 import portal658.items.CraftingComponent;
@@ -36,10 +37,12 @@ public class ModItems {
 	public static void register() {
 		setRegister(basicCoin);
 		setRegister(otherCoin);
-		setRegister(craftingComponent);
 		setRegister(luckyTicket);
 		setRegister(morovizka);
 		setRegister(chisel_rar);
+		if (Config.enableCraftingComponents) {
+			setRegister(craftingComponent);
+		}
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -64,13 +67,17 @@ public class ModItems {
 	public static void registerItemVariants() {
 		RegisterModel.registerItemVariants(basicCoin, listBasicCoin);
 		RegisterModel.registerItemVariants(otherCoin, listOtherCoin);
-		RegisterModel.registerItemVariants(craftingComponent, listCraftingComponent);
+		if (Config.enableCraftingComponents) {
+			RegisterModel.registerItemVariants(craftingComponent, listCraftingComponent);
+		}
 	}
 
 	@SideOnly(Side.CLIENT)
 	public static void setRender_withMetaData() {
 		RegisterModel.registerRender(basicCoin, listBasicCoin);
 		RegisterModel.registerRender(otherCoin, listOtherCoin);
-		RegisterModel.registerRender(craftingComponent, listCraftingComponent);
+		if (Config.enableCraftingComponents) {
+			RegisterModel.registerRender(craftingComponent, listCraftingComponent);
+		}
 	}
 }
